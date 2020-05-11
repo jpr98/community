@@ -19,9 +19,14 @@ class AlertDetailViewController: UIViewController {
 	@IBOutlet weak var closeButton: UIButton!
 	
 	var alertType: AlertType = .suspect
-	private let transition = CircularTransition()
+	let transition = CircularTransition()
 	
 	override func viewDidLoad() {
+		configureUI()
+	}
+	
+	func configureUI() {
+		closeButton.roundCorners(to: closeButton.frame.height / 2)
 		if alertType == .suspect {
 			view.backgroundColor = UIColor.getCommunity(.orange)
 		} else if alertType == .crime {
@@ -32,7 +37,7 @@ class AlertDetailViewController: UIViewController {
 	}
 	
 	@IBAction func closeButtonTapped(_ sender: Any) {
-		
+		performSegue(withIdentifier: "unwindToMainAlert", sender: self)
 	}
 	
 }

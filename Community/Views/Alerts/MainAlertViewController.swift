@@ -73,12 +73,15 @@ class MainAlertViewController: UIViewController {
 		if gesture.state == .began {
 			growButton(button) {
 				self.prepareTransitionFor(button)
+				self.enableButtonsInteractions()
 				self.showAlertDetailVC(alertType: type, transitionDelegate: self)
 			}
 		} else if gesture.state == .ended {
 			smallerButton(button)
 		}
 	}
+	
+	@IBAction func unwindToMainAlertVC(_ segue: UIStoryboardSegue) {}
 	
 	@IBAction func firstButtonTapped(_ sender: Any) {
 		// Send alert
@@ -99,7 +102,7 @@ class MainAlertViewController: UIViewController {
 extension MainAlertViewController: UIViewControllerTransitioningDelegate {
 	
 	func prepareTransitionFor(_ button: UIButton) {
-		transition.duration = 0.1
+		transition.duration = 1
 		transition.startingPoint = view.convert(button.center, from: button.superview)
 		transition.circleColor = button.backgroundColor!
 	}
@@ -123,7 +126,7 @@ extension MainAlertViewController {
 		button.superview!.bringSubviewToFront(button)
 		disbleButtonsExcept(button)
 		
-		UIView.animate(withDuration: 1.5, delay: 0, options: [.allowUserInteraction], animations: {
+		UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
 			button.transform = CGAffineTransform.init(scaleX: 10, y: 10)
 			self.doneAnimation = true
 		}) { (_) in

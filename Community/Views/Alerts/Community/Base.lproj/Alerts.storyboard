@@ -101,9 +101,11 @@
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="3Gb-W8-5qW" id="gne-GW-rZa"/>
+                        <segue destination="isw-sh-lol" kind="unwind" identifier="unwindToMainAlert" unwindAction="unwindToMainAlertVC:" id="3Qa-81-iUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0a-8V-ttr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="isw-sh-lol" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1649" y="-329"/>
         </scene>
