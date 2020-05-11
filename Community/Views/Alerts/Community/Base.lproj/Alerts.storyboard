@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Report-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="MainAlertViewController" customModule="Community" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qzB-3r-LeS">
+                                <rect key="frame" x="114" y="119" width="186" height="639"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqk-QL-1DC">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="186.5"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Vqk-QL-1DC" secondAttribute="height" id="Zfj-WV-Odi"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="firstButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="WXV-e8-pQe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-t8-fR6">
+                                        <rect key="frame" x="0.0" y="226.5" width="186" height="186"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cWp-t8-fR6" secondAttribute="height" id="Bri-lo-sqr"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="secondButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="I3o-fc-JdP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBo-cV-hok">
+                                        <rect key="frame" x="0.0" y="452.5" width="186" height="186.5"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eBo-cV-hok" secondAttribute="height" id="5Y1-lc-rTq"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="thirdButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nXJ-nA-i4E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qzB-3r-LeS" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.45" id="JO8-xl-945"/>
+                            <constraint firstItem="qzB-3r-LeS" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="75" id="PCJ-qN-hzB"/>
+                            <constraint firstItem="qzB-3r-LeS" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="oUm-1U-u0W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Report" image="exclamationmark.bubble.fill" catalog="system" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="firstButton" destination="Vqk-QL-1DC" id="far-HD-C0F"/>
+                        <outlet property="secondButton" destination="cWp-t8-fR6" id="eGv-Gl-xTT"/>
+                        <outlet property="thirdButton" destination="eBo-cV-hok" id="uXK-Lh-OA5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="-329.46428571428572"/>
+        </scene>
+        <!--Alert Detail View Controller-->
+        <scene sceneID="1zq-V4-vot">
+            <objects>
+                <viewController storyboardIdentifier="AlertDetail" id="3pl-FE-KWh" customClass="AlertDetailViewController" customModule="Community" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sal-5e-OGy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gb-W8-5qW">
+                                <rect key="frame" x="40" y="79" width="40" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="c3j-aN-CkT"/>
+                                    <constraint firstAttribute="width" secondItem="3Gb-W8-5qW" secondAttribute="height" id="vc3-4R-bR1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="✕"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="3pl-FE-KWh" eventType="touchUpInside" id="7eq-ys-z8E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Gb-W8-5qW" firstAttribute="top" secondItem="QsJ-QO-hVD" secondAttribute="top" constant="35" id="Tcx-vS-IM9"/>
+                            <constraint firstItem="3Gb-W8-5qW" firstAttribute="leading" secondItem="QsJ-QO-hVD" secondAttribute="leading" constant="40" id="vMv-zC-g3q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QsJ-QO-hVD"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="3Gb-W8-5qW" id="gne-GW-rZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0a-8V-ttr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="-329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exclamationmark.bubble.fill" catalog="system" width="128" height="110"/>
+    </resources>
+</document>
