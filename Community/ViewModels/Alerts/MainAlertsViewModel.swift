@@ -26,7 +26,7 @@ class MainAlertsViewModel {
 		case failed = "Error enviando reporte"
 	}
 	
-	func createResport(of type: AlertType, completion: @escaping ((Bool)->())) {
+	func createReport(of type: AlertType, _ completion: Report.createReportCompletion = nil) {
 		let report = Report()
 		report.type = type
 		report.user = User.shared.id
@@ -43,7 +43,7 @@ class MainAlertsViewModel {
 			} else {
 				self.propertyForType(type).value = AlertStatus.failed.rawValue
 			}
-			completion(success)
+			completion?(success)
 		}
 	}
 	

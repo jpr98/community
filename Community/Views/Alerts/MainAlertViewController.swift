@@ -89,21 +89,15 @@ class MainAlertViewController: UIViewController {
 	@IBAction func unwindToMainAlertVC(_ segue: UIStoryboardSegue) {}
 	
 	@IBAction func firstButtonTapped(_ sender: Any) {
-		viewModel.createResport(of: .crime) { _ in
-			
-		}
+		viewModel.createReport(of: .crime)
 	}
 	
 	@IBAction func secondButtonTapped(_ sender: Any) {
-		viewModel.createResport(of: .suspect) { _ in
-			
-		}
+		viewModel.createReport(of: .suspect)
 	}
 	
 	@IBAction func thirdButtonTapped(_ sender: Any) {
-		viewModel.createResport(of: .medic) { _ in
-			
-		}
+		viewModel.createReport(of: .medic)
 	}
 	
 }
@@ -136,7 +130,7 @@ extension MainAlertViewController {
 		button.superview!.bringSubviewToFront(button)
 		titleColor = button.titleColor(for: .normal)
 		button.setTitleColor(.clear, for: .normal)
-		disbleButtonsExcept(button)
+		disableButtonsExcept(button)
 		
 		UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
 			button.transform = CGAffineTransform.init(scaleX: 10, y: 10)
@@ -158,7 +152,7 @@ extension MainAlertViewController {
 		})
 	}
 	
-	private func disbleButtonsExcept(_ button: UIButton) {
+	private func disableButtonsExcept(_ button: UIButton) {
 		if button != firstButton {
 			firstButton.isUserInteractionEnabled = false
 		}

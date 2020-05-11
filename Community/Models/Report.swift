@@ -33,10 +33,12 @@ class Report {
 	var user: String?
 	var description: String?
 	
-	func create(completion: @escaping ((Bool)->())) {
+	typealias createReportCompletion = ((_ success: Bool)->())?
+	
+	func create(completion: createReportCompletion) {
 		guard let user = user,
 			let type = type else {
-			completion(false)
+			completion?(false)
 			return
 		}
 		
@@ -45,10 +47,10 @@ class Report {
 		RestAPI.create(body: requestBody) { response in
 			switch response {
 			case .success(_):
-				completion(true)
+				completion?(true)
 			case .failure(_):
 				print("error in create report request")
-				completion(false)
+				completion?(false)
 			}
 		}
 	}
