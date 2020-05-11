@@ -35,7 +35,9 @@ public class Observable<T> {
 	
 	private func notifyObservers(_ value: T) {
 		self.observers.forEach { [unowned self](observer) in
-			observer(self, value)
+			DispatchQueue.main.async {
+				observer(self, value)
+			}
 		}
 	}
 	

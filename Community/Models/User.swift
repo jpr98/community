@@ -9,7 +9,7 @@
 import Foundation
 
 class User {
-	var id: Int
+	var id: String
 	var name: String
 	var lastname: String
 	var email: String
@@ -25,17 +25,18 @@ class User {
 	static var shared = User()
 	
 	init() {
-		id = -1
+		id = ""
 		name = ""
 		lastname = ""
 		email = ""
 		community = Community(id: "sdf")
 		address = ""
 		phone = ""
+		token = UserDefaults.standard.string(forKey: "token")
 	}
 	
 	init(email: String, password: String) {
-		id = -1
+		id = ""
 		name = ""
 		lastname = ""
 		self.email = email
@@ -45,7 +46,7 @@ class User {
 		self.password = password
 	}
 	
-	init(id: Int, name: String, lastname: String, email: String, token: String, community: Community, address: String, phone: String) {
+	init(id: String, name: String, lastname: String, email: String, token: String, community: Community, address: String, phone: String) {
 		self.id = id
 		self.name = name
 		self.lastname = lastname
@@ -62,6 +63,8 @@ class User {
 			case .success(let auth):
 				UserDefaults.standard.set(auth.token, forKey: "token")
 				UserDefaults.standard.set(true, forKey: "user_loggedin")
+				shared.token = auth.token
+				shared.id = auth.user.id
 				completion(true)
 			case .failure(let e):
 				print(e.localizedDescription)

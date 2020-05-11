@@ -23,6 +23,9 @@
 		0B94DC8E2468861B00EE250A /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B94DC8C2468861B00EE250A /* Alerts.storyboard */; };
 		0B94DC9024688FD700EE250A /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC8F24688FD700EE250A /* CircularTransition.swift */; };
 		0B94DC922468997000EE250A /* AlertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC912468997000EE250A /* AlertDetailViewController.swift */; };
+		0B94DC942468F83600EE250A /* ReportsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC932468F83600EE250A /* ReportsStructs.swift */; };
+		0B94DC962468FBF900EE250A /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC952468FBF900EE250A /* Report.swift */; };
+		0B94DC992468FE1E00EE250A /* MainAlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC982468FE1E00EE250A /* MainAlertsViewModel.swift */; };
 		0B98A4F6244FFEE10086D4F4 /* UIView+Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4F5244FFEE10086D4F4 /* UIView+Community.swift */; };
 		0B98A4F9245001EA0086D4F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4F8245001EA0086D4F4 /* LoginViewModel.swift */; };
 		0B98A4FB24500FAB0086D4F4 /* Community+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4FA24500FAB0086D4F4 /* Community+UIColor.swift */; };
@@ -70,6 +73,9 @@
 		0B94DC8D2468861B00EE250A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Community/Base.lproj/Alerts.storyboard; sourceTree = "<group>"; };
 		0B94DC8F24688FD700EE250A /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		0B94DC912468997000EE250A /* AlertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDetailViewController.swift; sourceTree = "<group>"; };
+		0B94DC932468F83600EE250A /* ReportsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsStructs.swift; sourceTree = "<group>"; };
+		0B94DC952468FBF900EE250A /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		0B94DC982468FE1E00EE250A /* MainAlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlertsViewModel.swift; sourceTree = "<group>"; };
 		0B98A4F5244FFEE10086D4F4 /* UIView+Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Community.swift"; sourceTree = "<group>"; };
 		0B98A4F8245001EA0086D4F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0B98A4FA24500FAB0086D4F4 /* Community+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Community+UIColor.swift"; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 			children = (
 				0B34DEBB244FDDB900870321 /* User.swift */,
 				0BEF4AF824516D4200CC30B8 /* Community.swift */,
+				0B94DC952468FBF900EE250A /* Report.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				0BEF4AF6245145B300CC30B8 /* AuthStructs.swift */,
+				0B94DC932468F83600EE250A /* ReportsStructs.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 		0B34DED0244FF19A00870321 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0B94DC972468FE0900EE250A /* Alerts */,
 				0B98A4F7245001D90086D4F4 /* Onboarding */,
 			);
 			path = ViewModels;
@@ -224,6 +233,14 @@
 				0B94DC8F24688FD700EE250A /* CircularTransition.swift */,
 				0B34DE9A244FC92000870321 /* MainAlertViewController.swift */,
 				0B94DC912468997000EE250A /* AlertDetailViewController.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		0B94DC972468FE0900EE250A /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				0B94DC982468FE1E00EE250A /* MainAlertsViewModel.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -371,6 +388,9 @@
 				0B98A5022450A27D0086D4F4 /* Observable.swift in Sources */,
 				0B34DED2244FF1DE00870321 /* LoginViewController.swift in Sources */,
 				0B34DED7244FF75D00870321 /* CreateUserViewController.swift in Sources */,
+				0B94DC992468FE1E00EE250A /* MainAlertsViewModel.swift in Sources */,
+				0B94DC942468F83600EE250A /* ReportsStructs.swift in Sources */,
+				0B94DC962468FBF900EE250A /* Report.swift in Sources */,
 				0B98A4F9245001EA0086D4F4 /* LoginViewModel.swift in Sources */,
 				0B98A4F6244FFEE10086D4F4 /* UIView+Community.swift in Sources */,
 				0BEF4AF7245145B300CC30B8 /* AuthStructs.swift in Sources */,

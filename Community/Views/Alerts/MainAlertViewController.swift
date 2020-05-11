@@ -8,12 +8,6 @@
 
 import UIKit
 
-enum AlertType: String {
-	case crime = "crime"
-	case suspect = "suspect"
-	case medic = "medic"
-}
-
 class MainAlertViewController: UIViewController {
 
 	@IBOutlet weak var firstButton: UIButton!
@@ -22,6 +16,8 @@ class MainAlertViewController: UIViewController {
 	
 	private let transition = CircularTransition()
 	private var doneAnimation = false
+	private var titleColor: UIColor?
+	var viewModel = MainAlertsViewModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -47,12 +43,21 @@ class MainAlertViewController: UIViewController {
 	func configureUI() {
 		firstButton.backgroundColor = UIColor.getCommunity(.orange)
 		firstButton.roundCorners(to: firstButton.frame.height / 2)
+		viewModel.crimeButtonText.addObserver { [unowned self] (_, value) in
+			self.firstButton.setTitle(value, for: .normal)
+		}
 		
 		secondButton.backgroundColor = UIColor.getCommunity(.yellow)
 		secondButton.roundCorners(to: secondButton.frame.height / 2)
+		viewModel.suspectButtonText.addObserver { [unowned self] (_, value) in
+			self.secondButton.setTitle(value, for: .normal)
+		}
 		
 		thirdButton.backgroundColor = UIColor.getCommunity(.lightBlue)
 		thirdButton.roundCorners(to: thirdButton.frame.height / 2)
+		viewModel.medicButtonText.addObserver { [unowned self] (_, value) in
+			self.thirdButton.setTitle(value, for: .normal)
+		}
 	}
 	
 	@objc func longTap(gesture: UILongPressGestureRecognizer) {
@@ -84,16 +89,21 @@ class MainAlertViewController: UIViewController {
 	@IBAction func unwindToMainAlertVC(_ segue: UIStoryboardSegue) {}
 	
 	@IBAction func firstButtonTapped(_ sender: Any) {
-		// Send alert
-		print("tap")
+		viewModel.createResport(of: .crime) { _ in
+			
+		}
 	}
 	
 	@IBAction func secondButtonTapped(_ sender: Any) {
-		// Send alert
+		viewModel.createResport(of: .suspect) { _ in
+			
+		}
 	}
 	
 	@IBAction func thirdButtonTapped(_ sender: Any) {
-		// Send alert
+		viewModel.createResport(of: .medic) { _ in
+			
+		}
 	}
 	
 }
@@ -102,7 +112,7 @@ class MainAlertViewController: UIViewController {
 extension MainAlertViewController: UIViewControllerTransitioningDelegate {
 	
 	func prepareTransitionFor(_ button: UIButton) {
-		transition.duration = 1
+		transition.duration = 0.25
 		transition.startingPoint = view.convert(button.center, from: button.superview)
 		transition.circleColor = button.backgroundColor!
 	}
@@ -124,6 +134,8 @@ extension MainAlertViewController {
 	
 	private func growButton(_ button: UIButton, _ completion: (()->())? = nil) {
 		button.superview!.bringSubviewToFront(button)
+		titleColor = button.titleColor(for: .normal)
+		button.setTitleColor(.clear, for: .normal)
 		disbleButtonsExcept(button)
 		
 		UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
@@ -139,6 +151,7 @@ extension MainAlertViewController {
 	}
 	
 	private func smallerButton(_ button: UIButton) {
+		button.setTitleColor(titleColor, for: .normal)
 		UIView.animate(withDuration: 0.4, delay: 0, options: [.allowUserInteraction], animations: {
 			self.doneAnimation = false
 			button.transform = CGAffineTransform.identity

@@ -14,4 +14,8 @@ extension RestAPI {
 		request(.community, path: "/auth", method: .POST, body: body, done: done)
 	}
 	
+	// MARK: - Reports
+	class func create(body: CreateReportRequest, done: @escaping Response<CreateReportResponse>) {
+		request(.community, path: "/reports", method: .POST, body: body, done: done)
+	}
 }

@@ -16,7 +16,7 @@ enum HTTPMethod: String {
 }
 
 enum API: String {
-	case community = "http://189.159.57.217:3001/api"
+	case community = "http://189.159.58.136:3001/api"
 	
 	func baseURL() -> String {
 		return self.rawValue
@@ -40,7 +40,7 @@ class RestAPI {
 		
 		func getToken() -> String? {
 			if let token = User.shared.token {
-				return "Token token=" + token
+				return "Bearer " + token
 			} else {
 				return nil
 			}
