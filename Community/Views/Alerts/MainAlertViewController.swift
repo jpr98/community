@@ -60,6 +60,7 @@ class MainAlertViewController: UIViewController {
 		}
 	}
 	
+	// MARK: - IBActions
 	@objc func longTap(gesture: UILongPressGestureRecognizer) {
 		guard let button = gesture.view as? UIButton else { return }
 		
@@ -135,7 +136,7 @@ extension MainAlertViewController {
 		UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: {
 			button.transform = CGAffineTransform.init(scaleX: 10, y: 10)
 			self.doneAnimation = true
-		}) { (_) in
+		}) { _ in
 			if self.doneAnimation {
 				completion?()
 			} else {
@@ -145,11 +146,12 @@ extension MainAlertViewController {
 	}
 	
 	private func smallerButton(_ button: UIButton) {
-		button.setTitleColor(titleColor, for: .normal)
 		UIView.animate(withDuration: 0.4, delay: 0, options: [.allowUserInteraction], animations: {
 			self.doneAnimation = false
 			button.transform = CGAffineTransform.identity
-		})
+		}) { _ in
+			button.setTitleColor(self.titleColor, for: .normal)
+		}
 	}
 	
 	private func disableButtonsExcept(_ button: UIButton) {

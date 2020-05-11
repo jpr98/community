@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
 		view.addGestureRecognizer(tap)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -39,24 +40,6 @@ class LoginViewController: UIViewController {
 	deinit {
 		NotificationCenter.default.removeObserver(self)
 		viewModel = nil
-	}
-	
-	@objc func dismissKeyboard() {
-		self.view.endEditing(true)
-	}
-	
-	@objc func keyboardWillShow(notification: NSNotification) {
-		if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-			if self.view.frame.origin.y == 0 {
-				self.view.frame.origin.y -= keyboardSize.height
-			}
-		}
-	}
-
-	@objc func keyboardWillHide(notification: NSNotification) {
-		if self.view.frame.origin.y != 0 {
-			self.view.frame.origin.y = 0
-		}
 	}
 	
 	func configureUI() {

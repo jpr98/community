@@ -26,6 +26,7 @@
 		0B94DC942468F83600EE250A /* ReportsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC932468F83600EE250A /* ReportsStructs.swift */; };
 		0B94DC962468FBF900EE250A /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC952468FBF900EE250A /* Report.swift */; };
 		0B94DC992468FE1E00EE250A /* MainAlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC982468FE1E00EE250A /* MainAlertsViewModel.swift */; };
+		0B94DC9B24692D3E00EE250A /* UIViewController+Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94DC9A24692D3E00EE250A /* UIViewController+Community.swift */; };
 		0B98A4F6244FFEE10086D4F4 /* UIView+Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4F5244FFEE10086D4F4 /* UIView+Community.swift */; };
 		0B98A4F9245001EA0086D4F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4F8245001EA0086D4F4 /* LoginViewModel.swift */; };
 		0B98A4FB24500FAB0086D4F4 /* Community+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4FA24500FAB0086D4F4 /* Community+UIColor.swift */; };
@@ -76,6 +77,7 @@
 		0B94DC932468F83600EE250A /* ReportsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsStructs.swift; sourceTree = "<group>"; };
 		0B94DC952468FBF900EE250A /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		0B94DC982468FE1E00EE250A /* MainAlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlertsViewModel.swift; sourceTree = "<group>"; };
+		0B94DC9A24692D3E00EE250A /* UIViewController+Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Community.swift"; sourceTree = "<group>"; };
 		0B98A4F5244FFEE10086D4F4 /* UIView+Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Community.swift"; sourceTree = "<group>"; };
 		0B98A4F8245001EA0086D4F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0B98A4FA24500FAB0086D4F4 /* Community+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Community+UIColor.swift"; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			children = (
 				0B98A4F5244FFEE10086D4F4 /* UIView+Community.swift */,
 				0B98A4FA24500FAB0086D4F4 /* Community+UIColor.swift */,
+				0B94DC9A24692D3E00EE250A /* UIViewController+Community.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				0B94DC942468F83600EE250A /* ReportsStructs.swift in Sources */,
 				0B94DC962468FBF900EE250A /* Report.swift in Sources */,
 				0B98A4F9245001EA0086D4F4 /* LoginViewModel.swift in Sources */,
+				0B94DC9B24692D3E00EE250A /* UIViewController+Community.swift in Sources */,
 				0B98A4F6244FFEE10086D4F4 /* UIView+Community.swift in Sources */,
 				0BEF4AF7245145B300CC30B8 /* AuthStructs.swift in Sources */,
 				0BEF4AF52451206B00CC30B8 /* API+Endpoints.swift in Sources */,

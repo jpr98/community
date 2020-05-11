@@ -17,12 +17,26 @@ class AlertDetailViewController: UIViewController {
 	static let identifier = "AlertDetail"
 	
 	@IBOutlet weak var closeButton: UIButton!
+	@IBOutlet weak var descriptionLabel: UILabel!
+	@IBOutlet weak var descriptionTextView: UITextView!
+	@IBOutlet weak var addImageButton: UIButton!
+	@IBOutlet weak var sendButton: UIButton!
 	
 	var alertType: AlertType = .suspect
 	let transition = CircularTransition()
 	
 	override func viewDidLoad() {
 		configureUI()
+		
+		let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+		view.addGestureRecognizer(tap)
+		
+//		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+//		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+	}
+	
+	deinit {
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 	func configureUI() {
@@ -34,10 +48,23 @@ class AlertDetailViewController: UIViewController {
 		} else if alertType == .medic {
 			view.backgroundColor = UIColor.getCommunity(.lightBlue)
 		}
+		
+		addImageButton.backgroundColor = UIColor.getCommunity(.darkBlue)
+		addImageButton.roundCorners(to: addImageButton.frame.height / 2)
+		
+		sendButton.backgroundColor = UIColor.getCommunity(.darkBlue)
+		sendButton.roundCorners(to: sendButton.frame.height / 2)
 	}
 	
+	// MARK: - IBActions
 	@IBAction func closeButtonTapped(_ sender: Any) {
 		performSegue(withIdentifier: "unwindToMainAlert", sender: self)
+	}
+	
+	@IBAction func addImageButtonTapped(_ sender: Any) {
+	}
+	
+	@IBAction func sendButtonTapped(_ sender: Any) {
 	}
 	
 }

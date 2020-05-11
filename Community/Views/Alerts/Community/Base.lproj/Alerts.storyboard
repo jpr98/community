@@ -103,33 +103,45 @@
                                     <action selector="closeButtonTapped:" destination="3pl-FE-KWh" eventType="touchUpInside" id="7eq-ys-z8E"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QCc-h4-oF7">
-                                <rect key="frame" x="40" y="202" width="342" height="173"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QCc-h4-oF7">
+                                <rect key="frame" x="36" y="200" width="342" height="182"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhC-Ex-Q0r">
-                                <rect key="frame" x="158" y="410" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhC-Ex-Q0r">
+                                <rect key="frame" x="117" y="417" width="180" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="BPV-Fi-uPI"/>
+                                    <constraint firstAttribute="width" constant="180" id="NeW-1A-cjM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
                                 <state key="normal" title="Añadir imagen">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImageButtonTapped:" destination="3pl-FE-KWh" eventType="touchUpInside" id="afH-b9-Lmb"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak5-RG-DTm">
-                                <rect key="frame" x="186" y="514" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak5-RG-DTm">
+                                <rect key="frame" x="117" y="532" width="180" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="3vm-d9-j7T"/>
+                                    <constraint firstAttribute="height" constant="45" id="caN-9t-hDn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="18"/>
                                 <state key="normal" title="Enviar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButtonTapped:" destination="3pl-FE-KWh" eventType="touchUpInside" id="Yor-qT-wUT"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingresa un mensaje que describa el evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-yn-2kQ">
-                                <rect key="frame" x="40" y="173" width="326" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa un mensaje que describa el evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-yn-2kQ">
+                                <rect key="frame" x="36" y="169" width="342" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,13 +149,28 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Kcg-yn-2kQ" firstAttribute="top" secondItem="3Gb-W8-5qW" secondAttribute="bottom" constant="50" id="4P0-x8-0mh"/>
+                            <constraint firstItem="zhC-Ex-Q0r" firstAttribute="centerX" secondItem="QCc-h4-oF7" secondAttribute="centerX" id="DHj-cV-zIg"/>
+                            <constraint firstItem="Kcg-yn-2kQ" firstAttribute="centerX" secondItem="QCc-h4-oF7" secondAttribute="centerX" id="OnP-c0-Uyo"/>
+                            <constraint firstItem="QCc-h4-oF7" firstAttribute="top" secondItem="Kcg-yn-2kQ" secondAttribute="bottom" constant="10" id="QWR-Tk-kYy"/>
                             <constraint firstItem="3Gb-W8-5qW" firstAttribute="top" secondItem="QsJ-QO-hVD" secondAttribute="top" constant="35" id="Tcx-vS-IM9"/>
+                            <constraint firstItem="Kcg-yn-2kQ" firstAttribute="width" secondItem="QCc-h4-oF7" secondAttribute="width" id="hLn-3U-Xnd"/>
+                            <constraint firstItem="zhC-Ex-Q0r" firstAttribute="top" secondItem="QCc-h4-oF7" secondAttribute="bottom" constant="35" id="mbA-1k-JUQ"/>
+                            <constraint firstItem="Ak5-RG-DTm" firstAttribute="top" secondItem="zhC-Ex-Q0r" secondAttribute="bottom" constant="70" id="paz-Qs-Bof"/>
+                            <constraint firstItem="QsJ-QO-hVD" firstAttribute="bottom" secondItem="Ak5-RG-DTm" secondAttribute="bottom" constant="285" id="ppy-9Z-hBf"/>
+                            <constraint firstItem="QCc-h4-oF7" firstAttribute="centerX" secondItem="QsJ-QO-hVD" secondAttribute="centerX" id="qev-LE-rU7"/>
+                            <constraint firstItem="QCc-h4-oF7" firstAttribute="width" secondItem="Sal-5e-OGy" secondAttribute="width" multiplier="0.826087" id="uIl-lL-xIA"/>
                             <constraint firstItem="3Gb-W8-5qW" firstAttribute="leading" secondItem="QsJ-QO-hVD" secondAttribute="leading" constant="40" id="vMv-zC-g3q"/>
+                            <constraint firstItem="Ak5-RG-DTm" firstAttribute="centerX" secondItem="zhC-Ex-Q0r" secondAttribute="centerX" id="wIM-qk-Rxb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QsJ-QO-hVD"/>
                     </view>
                     <connections>
+                        <outlet property="addImageButton" destination="zhC-Ex-Q0r" id="61k-xb-yta"/>
                         <outlet property="closeButton" destination="3Gb-W8-5qW" id="gne-GW-rZa"/>
+                        <outlet property="descriptionLabel" destination="Kcg-yn-2kQ" id="Mlv-nB-pMT"/>
+                        <outlet property="descriptionTextView" destination="QCc-h4-oF7" id="87K-sd-fMi"/>
+                        <outlet property="sendButton" destination="Ak5-RG-DTm" id="tEC-Pr-N9W"/>
                         <segue destination="isw-sh-lol" kind="unwind" identifier="unwindToMainAlert" unwindAction="unwindToMainAlertVC:" id="3Qa-81-iUB"/>
                     </connections>
                 </viewController>
