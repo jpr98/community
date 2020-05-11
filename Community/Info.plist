@@ -85,5 +85,7 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Se necesita la cámara para tomar fotos.</string>
 </dict>
 </plist>

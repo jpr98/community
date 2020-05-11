@@ -22,8 +22,8 @@ class AlertDetailViewController: UIViewController {
 	@IBOutlet weak var addImageButton: UIButton!
 	@IBOutlet weak var sendButton: UIButton!
 	
-	var alertType: AlertType = .suspect
 	let transition = CircularTransition()
+	var viewModel: AlertDetailViewModel?
 	
 	override func viewDidLoad() {
 		configureUI()
@@ -37,23 +37,23 @@ class AlertDetailViewController: UIViewController {
 	
 	deinit {
 		NotificationCenter.default.removeObserver(self)
+		viewModel = nil
 	}
 	
 	func configureUI() {
+		guard let viewModel = viewModel else { return }
+		
+		view.backgroundColor = viewModel.viewColor
 		closeButton.roundCorners(to: closeButton.frame.height / 2)
-		if alertType == .suspect {
-			view.backgroundColor = UIColor.getCommunity(.orange)
-		} else if alertType == .crime {
-			view.backgroundColor = UIColor.getCommunity(.yellow)
-		} else if alertType == .medic {
-			view.backgroundColor = UIColor.getCommunity(.lightBlue)
-		}
 		
 		addImageButton.backgroundColor = UIColor.getCommunity(.darkBlue)
 		addImageButton.roundCorners(to: addImageButton.frame.height / 2)
 		
 		sendButton.backgroundColor = UIColor.getCommunity(.darkBlue)
 		sendButton.roundCorners(to: sendButton.frame.height / 2)
+		viewModel.sendButtonText.addObserver { [unowned self] (_, value) in
+			self.sendButton.setTitle(value, for: .normal)
+		}
 	}
 	
 	// MARK: - IBActions
@@ -62,17 +62,44 @@ class AlertDetailViewController: UIViewController {
 	}
 	
 	@IBAction func addImageButtonTapped(_ sender: Any) {
+		let vc = UIImagePickerController()
+		vc.sourceType = .camera
+		vc.allowsEditing = true
+		vc.delegate = self
+		present(vc, animated: true)
 	}
 	
 	@IBAction func sendButtonTapped(_ sender: Any) {
+		guard let description = descriptionTextView.text else { return }
+		
+		viewModel?.createReport(with: description) { [unowned self] success in
+			if success {
+				self.performSegue(withIdentifier: "unwindToMainAlert", sender: self)
+			}
+		}
 	}
 	
+}
+
+// MARK: - ImagePicker
+extension AlertDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+		
+		guard let _ = info[.editedImage] as? UIImage else {
+			print("no image found")
+			return
+		}
+		
+		addImageButton.isEnabled = false
+	}
 }
 
 extension UIViewController {
 	func showAlertDetailVC(alertType: AlertType, transitionDelegate delegate: UIViewControllerTransitioningDelegate) {
 		let vc = AlertDetailViewController.make()
-		vc.alertType = alertType
+		let vm = AlertDetailViewModel(type: alertType)
+		vc.viewModel = vm
 		vc.transitioningDelegate = delegate
 		vc.modalPresentationStyle = .custom
 		present(vc, animated: true, completion: nil)

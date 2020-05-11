@@ -36,13 +36,12 @@ class Report {
 	typealias createReportCompletion = ((_ success: Bool)->())?
 	
 	func create(completion: createReportCompletion) {
-		guard let user = user,
-			let type = type else {
+		guard let type = type else {
 			completion?(false)
 			return
 		}
 		
-		let requestBody = CreateReportRequest(type: type.rawValue, user: user, description: description ?? "")
+		let requestBody = CreateReportRequest(type: type.rawValue, user: User.shared.id, description: description ?? "")
 		
 		RestAPI.create(body: requestBody) { response in
 			switch response {

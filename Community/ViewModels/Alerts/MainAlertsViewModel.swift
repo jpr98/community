@@ -29,8 +29,6 @@ class MainAlertsViewModel {
 	func createReport(of type: AlertType, _ completion: Report.createReportCompletion = nil) {
 		let report = Report()
 		report.type = type
-		report.user = User.shared.id
-		report.description = ""
 		
 		propertyForType(type).value = AlertStatus.sending.rawValue
 		
