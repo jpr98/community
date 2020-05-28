@@ -8,17 +8,47 @@
 
 import UIKit
 
+protocol FeedTableViewCellDelegate: class {
+	func didPressInfo(at indexPath: IndexPath)
+}
+
 class FeedTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	@IBOutlet weak var shadowView: UIView!
+	@IBOutlet weak var cardView: UIView!
+	@IBOutlet weak var colorView: UIView!
+	@IBOutlet weak var labelsStackView: UIStackView!
+	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var subtitleLabel: UILabel!
+	@IBOutlet weak var infoButton: UIButton!
+	
+	private var currentIndexPath = IndexPath()
+	private weak var viewModel: FeedTableViewCellViewModel?
+	private weak var delegate: FeedTableViewCellDelegate?
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+		cardView.roundCorners(to: 8)
+		shadowView.dropShadow()
     }
+	
+	func setup(indexPath: IndexPath, vm: FeedTableViewCellViewModel, delegate: FeedTableViewCellDelegate) {
+		currentIndexPath = indexPath
+		viewModel = vm
+		self.delegate = delegate
+		
+		titleLabel.text = vm.title
+		subtitleLabel.text = vm.subtitle
+		
+		colorView.backgroundColor = vm.color
+	}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    
 
-        // Configure the view for the selected state
-    }
-
+	// MARK: - IBActions
+	@IBAction func infoButtonTapped(_ sender: Any) {
+		delegate?.didPressInfo(at: currentIndexPath)
+	}
+	
 }
