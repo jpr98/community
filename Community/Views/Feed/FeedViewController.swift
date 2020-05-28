@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FeedViewController.swift
 //  Community
 //
 //  Created by Juan Pablo Ramos on 21/04/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FeedViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

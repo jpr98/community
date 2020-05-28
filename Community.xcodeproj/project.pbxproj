@@ -10,7 +10,7 @@
 		0B34DE97244FC92000870321 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DE96244FC92000870321 /* AppDelegate.swift */; };
 		0B34DE99244FC92000870321 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DE98244FC92000870321 /* SceneDelegate.swift */; };
 		0B34DE9B244FC92000870321 /* MainAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DE9A244FC92000870321 /* MainAlertViewController.swift */; };
-		0B34DE9D244FC92000870321 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DE9C244FC92000870321 /* SecondViewController.swift */; };
+		0B34DE9D244FC92000870321 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DE9C244FC92000870321 /* FeedViewController.swift */; };
 		0B34DEA0244FC92000870321 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B34DE9E244FC92000870321 /* Main.storyboard */; };
 		0B34DEA2244FC92200870321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B34DEA1244FC92200870321 /* Assets.xcassets */; };
 		0B34DEA5244FC92200870321 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B34DEA3244FC92200870321 /* LaunchScreen.storyboard */; };
@@ -34,6 +34,10 @@
 		0B98A4FF245025250086D4F4 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4FE245025250086D4F4 /* ThirdViewController.swift */; };
 		0B98A5022450A27D0086D4F4 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A5012450A27D0086D4F4 /* Observable.swift */; };
 		0B98A5062450BC200086D4F4 /* UILabel+Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A5052450BC200086D4F4 /* UILabel+Observer.swift */; };
+		0BBA4EE9247F2F5400E34355 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA4EE7247F2F5400E34355 /* Feed.storyboard */; };
+		0BBA4EEC247F312D00E34355 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA4EEB247F312D00E34355 /* FeedTableViewCell.xib */; };
+		0BBA4EEE2480468000E34355 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EED2480467F00E34355 /* FeedTableViewCell.swift */; };
+		0BBA4EF12480497F00E34355 /* FeedTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */; };
 		0BEF4AED2451105200CC30B8 /* NetworkTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AEC2451105200CC30B8 /* NetworkTypes.swift */; };
 		0BEF4AEF2451119000CC30B8 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AEE2451119000CC30B8 /* RestAPI.swift */; };
 		0BEF4AF12451163E00CC30B8 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AF02451163E00CC30B8 /* AnyEncodable.swift */; };
@@ -59,7 +63,7 @@
 		0B34DE96244FC92000870321 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B34DE98244FC92000870321 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0B34DE9A244FC92000870321 /* MainAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlertViewController.swift; sourceTree = "<group>"; };
-		0B34DE9C244FC92000870321 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0B34DE9C244FC92000870321 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0B34DE9F244FC92000870321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B34DEA1244FC92200870321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B34DEA4244FC92200870321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +90,10 @@
 		0B98A4FE245025250086D4F4 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		0B98A5012450A27D0086D4F4 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		0B98A5052450BC200086D4F4 /* UILabel+Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Observer.swift"; sourceTree = "<group>"; };
+		0BBA4EE8247F2F5400E34355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Community/Base.lproj/Feed.storyboard; sourceTree = "<group>"; };
+		0BBA4EEB247F312D00E34355 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		0BBA4EED2480467F00E34355 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		0BEF4AEC2451105200CC30B8 /* NetworkTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTypes.swift; sourceTree = "<group>"; };
 		0BEF4AEE2451119000CC30B8 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		0BEF4AF02451163E00CC30B8 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
@@ -142,7 +150,6 @@
 				0B34DEBA244FDA1200870321 /* Models */,
 				0B34DE96244FC92000870321 /* AppDelegate.swift */,
 				0B34DE98244FC92000870321 /* SceneDelegate.swift */,
-				0B34DE9C244FC92000870321 /* SecondViewController.swift */,
 				0B34DE9E244FC92000870321 /* Main.storyboard */,
 				0B34DEA1244FC92200870321 /* Assets.xcassets */,
 				0B34DEA3244FC92200870321 /* LaunchScreen.storyboard */,
@@ -204,6 +211,7 @@
 		0B34DECF244FF18A00870321 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0BBA4EE6247F2DF500E34355 /* Feed */,
 				0B94DC8B2468829100EE250A /* Alerts */,
 				0B34DED5244FF73900870321 /* Onboarding */,
 			);
@@ -213,6 +221,7 @@
 		0B34DED0244FF19A00870321 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0BBA4EEF2480496C00E34355 /* Feed */,
 				0B94DC972468FE0900EE250A /* Alerts */,
 				0B98A4F7245001D90086D4F4 /* Onboarding */,
 			);
@@ -285,6 +294,33 @@
 				0B98A5052450BC200086D4F4 /* UILabel+Observer.swift */,
 			);
 			path = Observers;
+			sourceTree = "<group>";
+		};
+		0BBA4EE6247F2DF500E34355 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				0BBA4EEA247F311A00E34355 /* Cells */,
+				0B34DE9C244FC92000870321 /* FeedViewController.swift */,
+				0BBA4EE7247F2F5400E34355 /* Feed.storyboard */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		0BBA4EEA247F311A00E34355 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0BBA4EEB247F312D00E34355 /* FeedTableViewCell.xib */,
+				0BBA4EED2480467F00E34355 /* FeedTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0BBA4EEF2480496C00E34355 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,9 +406,11 @@
 			files = (
 				0B34DEA5244FC92200870321 /* LaunchScreen.storyboard in Resources */,
 				0B34DEA2244FC92200870321 /* Assets.xcassets in Resources */,
+				0BBA4EE9247F2F5400E34355 /* Feed.storyboard in Resources */,
 				0B34DEA0244FC92000870321 /* Main.storyboard in Resources */,
 				0B94DC8E2468861B00EE250A /* Alerts.storyboard in Resources */,
 				0B34DED9244FF77F00870321 /* Onboarding.storyboard in Resources */,
+				0BBA4EEC247F312D00E34355 /* FeedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,11 +442,13 @@
 				0BEF4AF7245145B300CC30B8 /* AuthStructs.swift in Sources */,
 				0BEF4AF52451206B00CC30B8 /* API+Endpoints.swift in Sources */,
 				0B34DED4244FF1F400870321 /* WelcomeViewController.swift in Sources */,
+				0BBA4EF12480497F00E34355 /* FeedTableViewCellViewModel.swift in Sources */,
 				0B98A4FF245025250086D4F4 /* ThirdViewController.swift in Sources */,
-				0B34DE9D244FC92000870321 /* SecondViewController.swift in Sources */,
+				0B34DE9D244FC92000870321 /* FeedViewController.swift in Sources */,
 				0B98A4FB24500FAB0086D4F4 /* Community+UIColor.swift in Sources */,
 				0B94DC922468997000EE250A /* AlertDetailViewController.swift in Sources */,
 				0BEF4AF924516D4200CC30B8 /* Community.swift in Sources */,
+				0BBA4EEE2480468000E34355 /* FeedTableViewCell.swift in Sources */,
 				0B98A5062450BC200086D4F4 /* UILabel+Observer.swift in Sources */,
 				0BEF4AF12451163E00CC30B8 /* AnyEncodable.swift in Sources */,
 				0B34DE9B244FC92000870321 /* MainAlertViewController.swift in Sources */,
@@ -463,6 +503,14 @@
 				0B94DC8D2468861B00EE250A /* Base */,
 			);
 			name = Alerts.storyboard;
+			sourceTree = "<group>";
+		};
+		0BBA4EE7247F2F5400E34355 /* Feed.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BBA4EE8247F2F5400E34355 /* Base */,
+			);
+			name = Feed.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
