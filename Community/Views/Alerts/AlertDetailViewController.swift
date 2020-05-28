@@ -51,9 +51,11 @@ class AlertDetailViewController: UIViewController {
 		
 		sendButton.backgroundColor = UIColor.getCommunity(.darkBlue)
 		sendButton.roundCorners(to: sendButton.frame.height / 2)
-		viewModel.sendButtonText.addObserver { [unowned self] (_, value) in
-			self.sendButton.setTitle(value, for: .normal)
+		viewModel.sendButtonText.addObserver { [weak self] (_, value) in
+			self?.sendButton.setTitle(value, for: .normal)
 		}
+		
+		descriptionTextView.roundCorners(to: 10)
 	}
 	
 	// MARK: - IBActions

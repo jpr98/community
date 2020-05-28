@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  ThirdViewController.swift
 //  Community
 //
 //  Created by Juan Pablo Ramos on 22/04/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
