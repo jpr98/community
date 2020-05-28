@@ -23,6 +23,17 @@ enum AlertType: Int {
 			return "Emergencia Médica"
 		}
 	}
+	
+	func getColor() -> CommunityColors {
+		switch self {
+		case .crime:
+			return .orange
+		case .suspect:
+			return .yellow
+		case .medic:
+			return .lightBlue
+		}
+	}
 }
 
 class Report {
@@ -52,5 +63,13 @@ class Report {
 				completion?(false)
 			}
 		}
+	}
+	
+	func generateTitle() -> String {
+		return "impl me"
+	}
+	
+	func subtitle() -> String {
+		return "imple me"
 	}
 }

@@ -41,19 +41,19 @@ class MainAlertViewController: UIViewController {
 	}
 	
 	func configureUI() {
-		firstButton.backgroundColor = UIColor.getCommunity(.orange)
+		firstButton.backgroundColor = UIColor.getCommunity(AlertType.crime.getColor())
 		firstButton.roundCorners(to: firstButton.frame.height / 2)
 		viewModel.crimeButtonText.addObserver { [unowned self] (_, value) in
 			self.firstButton.setTitle(value, for: .normal)
 		}
 		
-		secondButton.backgroundColor = UIColor.getCommunity(.yellow)
+		secondButton.backgroundColor = UIColor.getCommunity(AlertType.suspect.getColor())
 		secondButton.roundCorners(to: secondButton.frame.height / 2)
 		viewModel.suspectButtonText.addObserver { [unowned self] (_, value) in
 			self.secondButton.setTitle(value, for: .normal)
 		}
 		
-		thirdButton.backgroundColor = UIColor.getCommunity(.lightBlue)
+		thirdButton.backgroundColor = UIColor.getCommunity(AlertType.medic.getColor())
 		thirdButton.roundCorners(to: thirdButton.frame.height / 2)
 		viewModel.medicButtonText.addObserver { [unowned self] (_, value) in
 			self.thirdButton.setTitle(value, for: .normal)

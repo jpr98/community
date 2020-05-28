@@ -52,6 +52,7 @@ class LoginViewModel {
 	}
 	
 	func create(for email: String, with password: String, _ completion: @escaping User.createCompletion) {
+		#warning("fix this")
 		let user = User(email: email, password: password)
 		completion(user)
 	}
