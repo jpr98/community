@@ -16,7 +16,7 @@ enum HTTPMethod: String {
 }
 
 enum API: String {
-	case community = "http://189.159.58.136:3001/api"
+	case community = "http://ec2-3-85-177-214.compute-1.amazonaws.com/api"
 	
 	func baseURL() -> String {
 		return self.rawValue
