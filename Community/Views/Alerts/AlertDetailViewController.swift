@@ -24,6 +24,7 @@ class AlertDetailViewController: UIViewController {
 	
 	let transition = CircularTransition()
 	var viewModel: AlertDetailViewModel?
+	var imageToAttach: UIImage?
 	
 	override func viewDidLoad() {
 		configureUI()
@@ -74,7 +75,7 @@ class AlertDetailViewController: UIViewController {
 	@IBAction func sendButtonTapped(_ sender: Any) {
 		guard let description = descriptionTextView.text else { return }
 		
-		viewModel?.createReport(with: description) { [unowned self] success in
+		viewModel?.createReport(with: description, imageToAttach) { [unowned self] (success, _) in
 			if success {
 				self.performSegue(withIdentifier: "unwindToMainAlert", sender: self)
 			}
@@ -88,12 +89,19 @@ extension AlertDetailViewController: UIImagePickerControllerDelegate, UINavigati
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		
-		guard let _ = info[.editedImage] as? UIImage else {
+		guard let image = info[.editedImage] as? UIImage else {
 			print("no image found")
 			return
 		}
 		
+		self.imageToAttach = image
+		
 		addImageButton.isEnabled = false
+		self.dismiss(animated: true, completion: nil)
+	}
+	
+	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		self.dismiss(animated: true, completion: nil)
 	}
 }
 

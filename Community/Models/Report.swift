@@ -58,11 +58,11 @@ class Report {
 		sendingHelp = report.sendingHelp
 	}
 	
-	typealias createReportCompletion = ((_ success: Bool)->())?
+	typealias createReportCompletion = ((_ success: Bool, _ report: ReportResponse?)->())?
 	
 	func create(completion: createReportCompletion) {
 		guard let type = type else {
-			completion?(false)
+			completion?(false, nil)
 			return
 		}
 		
@@ -70,11 +70,11 @@ class Report {
 		
 		RestAPI.create(body: requestBody) { response in
 			switch response {
-			case .success(_):
-				completion?(true)
+			case .success(let report):
+				completion?(true, report.report)
 			case .failure(_):
 				print("error in create report request")
-				completion?(false)
+				completion?(false, nil)
 			}
 		}
 	}

@@ -41,6 +41,8 @@
 		0BBA4EF52480767800E34355 /* UserStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF42480767800E34355 /* UserStructs.swift */; };
 		0BBA4EF72480A26B00E34355 /* EmergencyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF62480A26B00E34355 /* EmergencyContactViewController.swift */; };
 		0BBA4EF92480A96700E34355 /* EmergencyContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF82480A96700E34355 /* EmergencyContactViewModel.swift */; };
+		0BBA4EFD248171D400E34355 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EFC248171D400E34355 /* FeedDetailViewController.swift */; };
+		0BBA4EFF24817A6C00E34355 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EFE24817A6C00E34355 /* FeedDetailViewModel.swift */; };
 		0BEF4AED2451105200CC30B8 /* NetworkTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AEC2451105200CC30B8 /* NetworkTypes.swift */; };
 		0BEF4AEF2451119000CC30B8 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AEE2451119000CC30B8 /* RestAPI.swift */; };
 		0BEF4AF12451163E00CC30B8 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AF02451163E00CC30B8 /* AnyEncodable.swift */; };
@@ -100,6 +102,8 @@
 		0BBA4EF42480767800E34355 /* UserStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructs.swift; sourceTree = "<group>"; };
 		0BBA4EF62480A26B00E34355 /* EmergencyContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewController.swift; sourceTree = "<group>"; };
 		0BBA4EF82480A96700E34355 /* EmergencyContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewModel.swift; sourceTree = "<group>"; };
+		0BBA4EFC248171D400E34355 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		0BBA4EFE24817A6C00E34355 /* FeedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewModel.swift; sourceTree = "<group>"; };
 		0BEF4AEC2451105200CC30B8 /* NetworkTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTypes.swift; sourceTree = "<group>"; };
 		0BEF4AEE2451119000CC30B8 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		0BEF4AF02451163E00CC30B8 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 			children = (
 				0BBA4EEA247F311A00E34355 /* Cells */,
 				0B34DE9C244FC92000870321 /* FeedViewController.swift */,
+				0BBA4EFC248171D400E34355 /* FeedDetailViewController.swift */,
 				0BBA4EE7247F2F5400E34355 /* Feed.storyboard */,
 			);
 			path = Feed;
@@ -328,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBA4EF22480707300E34355 /* FeedViewModel.swift */,
+				0BBA4EFE24817A6C00E34355 /* FeedDetailViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 				0BBA4EF32480707300E34355 /* FeedViewModel.swift in Sources */,
 				0B98A4FF245025250086D4F4 /* ThirdViewController.swift in Sources */,
 				0B34DE9D244FC92000870321 /* FeedViewController.swift in Sources */,
+				0BBA4EFD248171D400E34355 /* FeedDetailViewController.swift in Sources */,
 				0B98A4FB24500FAB0086D4F4 /* Community+UIColor.swift in Sources */,
 				0B94DC922468997000EE250A /* AlertDetailViewController.swift in Sources */,
 				0BEF4AF924516D4200CC30B8 /* Community.swift in Sources */,
@@ -471,6 +478,7 @@
 				0B34DEBC244FDDB900870321 /* User.swift in Sources */,
 				0BEF4AF32451199300CC30B8 /* Decoding.swift in Sources */,
 				0B34DE99244FC92000870321 /* SceneDelegate.swift in Sources */,
+				0BBA4EFF24817A6C00E34355 /* FeedDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

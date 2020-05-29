@@ -30,6 +30,7 @@ struct CreateReportResponse: Decodable {
 }
 
 struct ReportResponse: Decodable {
+	var id: String
 	var type: Int
 	var description: String
 	var imageURL: String
@@ -37,7 +38,7 @@ struct ReportResponse: Decodable {
 	var user: String
 	
 	enum CodingKeys: String, CodingKey {
-        case type = "iType", user = "fkUser", description = "sDescription", imageURL = "sImageKey", sendingHelp = "bSendingHelp"
+        case id = "_id", type = "iType", user = "fkUser", description = "sDescription", imageURL = "sImageKey", sendingHelp = "bSendingHelp"
     }
 }
 

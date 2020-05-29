@@ -6,7 +6,7 @@
 //  Copyright © 2020 ITESM. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension RestAPI {
 	// MARK: - Users
@@ -29,5 +29,14 @@ extension RestAPI {
 	
 	class func getFeed(done: @escaping Response<FeedReportsResponse>) {
 		request(.community, path: "/reports", method: .GET, done: done)
+	}
+	
+	class func upload(image: UIImage, to report: Report, completion: @escaping (Bool)->()) {
+		guard let id = report.id else {
+			completion(false)
+			return
+		}
+		
+		uploadImage(.community, path: "/reports/\(id)", paramName: "image", fileName: "img", image: image, completion: completion)
 	}
 }

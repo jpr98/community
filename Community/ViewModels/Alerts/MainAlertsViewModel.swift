@@ -32,7 +32,7 @@ class MainAlertsViewModel {
 		
 		propertyForType(type).value = AlertStatus.sending.rawValue
 		
-		report.create { success in
+		report.create { (success, r) in
 			if success {
 				self.propertyForType(type).value = AlertStatus.successful.rawValue
 				DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -41,7 +41,7 @@ class MainAlertsViewModel {
 			} else {
 				self.propertyForType(type).value = AlertStatus.failed.rawValue
 			}
-			completion?(success)
+			completion?(success, r)
 		}
 	}
 	

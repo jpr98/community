@@ -70,7 +70,8 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
 extension FeedViewController: FeedTableViewCellDelegate {
 	
 	func didPressInfo(at indexPath: IndexPath) {
-		// segue to details
+		guard let reports = viewModel.reports.value else { return }
+		showFeedDetail(for: reports[indexPath.row])
 	}
 	
 }
