@@ -38,6 +38,10 @@
 		0BBA4EEC247F312D00E34355 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA4EEB247F312D00E34355 /* FeedTableViewCell.xib */; };
 		0BBA4EEE2480468000E34355 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EED2480467F00E34355 /* FeedTableViewCell.swift */; };
 		0BBA4EF12480497F00E34355 /* FeedTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */; };
+		0BBA4EF32480707300E34355 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF22480707300E34355 /* FeedViewModel.swift */; };
+		0BBA4EF52480767800E34355 /* UserStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF42480767800E34355 /* UserStructs.swift */; };
+		0BBA4EF72480A26B00E34355 /* EmergencyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF62480A26B00E34355 /* EmergencyContactViewController.swift */; };
+		0BBA4EF92480A96700E34355 /* EmergencyContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF82480A96700E34355 /* EmergencyContactViewModel.swift */; };
 		0BEF4AED2451105200CC30B8 /* NetworkTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AEC2451105200CC30B8 /* NetworkTypes.swift */; };
 		0BEF4AEF2451119000CC30B8 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AEE2451119000CC30B8 /* RestAPI.swift */; };
 		0BEF4AF12451163E00CC30B8 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF4AF02451163E00CC30B8 /* AnyEncodable.swift */; };
@@ -94,6 +98,10 @@
 		0BBA4EEB247F312D00E34355 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		0BBA4EED2480467F00E34355 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		0BBA4EF22480707300E34355 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		0BBA4EF42480767800E34355 /* UserStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructs.swift; sourceTree = "<group>"; };
+		0BBA4EF62480A26B00E34355 /* EmergencyContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewController.swift; sourceTree = "<group>"; };
+		0BBA4EF82480A96700E34355 /* EmergencyContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewModel.swift; sourceTree = "<group>"; };
 		0BEF4AEC2451105200CC30B8 /* NetworkTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTypes.swift; sourceTree = "<group>"; };
 		0BEF4AEE2451119000CC30B8 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		0BEF4AF02451163E00CC30B8 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 			children = (
 				0BEF4AF6245145B300CC30B8 /* AuthStructs.swift */,
 				0B94DC932468F83600EE250A /* ReportsStructs.swift */,
+				0BBA4EF42480767800E34355 /* UserStructs.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -231,9 +240,10 @@
 		0B34DED5244FF73900870321 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				0B34DED3244FF1F400870321 /* WelcomeViewController.swift */,
-				0B34DED1244FF1DE00870321 /* LoginViewController.swift */,
 				0B34DED6244FF75D00870321 /* CreateUserViewController.swift */,
+				0BBA4EF62480A26B00E34355 /* EmergencyContactViewController.swift */,
+				0B34DED1244FF1DE00870321 /* LoginViewController.swift */,
+				0B34DED3244FF1F400870321 /* WelcomeViewController.swift */,
 				0B34DED8244FF77F00870321 /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
@@ -283,6 +293,7 @@
 			children = (
 				0B98A4F8245001EA0086D4F4 /* LoginViewModel.swift */,
 				0BEF4AFA2451726200CC30B8 /* CreateUserViewModel.swift */,
+				0BBA4EF82480A96700E34355 /* EmergencyContactViewModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -319,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */,
+				0BBA4EF22480707300E34355 /* FeedViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -435,13 +447,16 @@
 				0B34DED7244FF75D00870321 /* CreateUserViewController.swift in Sources */,
 				0B94DC992468FE1E00EE250A /* MainAlertsViewModel.swift in Sources */,
 				0B94DC942468F83600EE250A /* ReportsStructs.swift in Sources */,
+				0BBA4EF92480A96700E34355 /* EmergencyContactViewModel.swift in Sources */,
 				0B94DC962468FBF900EE250A /* Report.swift in Sources */,
 				0B98A4F9245001EA0086D4F4 /* LoginViewModel.swift in Sources */,
 				0B94DC9B24692D3E00EE250A /* UIViewController+Community.swift in Sources */,
 				0B98A4F6244FFEE10086D4F4 /* UIView+Community.swift in Sources */,
+				0BBA4EF72480A26B00E34355 /* EmergencyContactViewController.swift in Sources */,
 				0BEF4AF7245145B300CC30B8 /* AuthStructs.swift in Sources */,
 				0BEF4AF52451206B00CC30B8 /* API+Endpoints.swift in Sources */,
 				0B34DED4244FF1F400870321 /* WelcomeViewController.swift in Sources */,
+				0BBA4EF32480707300E34355 /* FeedViewModel.swift in Sources */,
 				0BBA4EF12480497F00E34355 /* FeedTableViewCellViewModel.swift in Sources */,
 				0B98A4FF245025250086D4F4 /* ThirdViewController.swift in Sources */,
 				0B34DE9D244FC92000870321 /* FeedViewController.swift in Sources */,
@@ -455,6 +470,7 @@
 				0B94DC9024688FD700EE250A /* CircularTransition.swift in Sources */,
 				0BEF4AED2451105200CC30B8 /* NetworkTypes.swift in Sources */,
 				0BEF4AFB2451726200CC30B8 /* CreateUserViewModel.swift in Sources */,
+				0BBA4EF52480767800E34355 /* UserStructs.swift in Sources */,
 				0B34DE97244FC92000870321 /* AppDelegate.swift in Sources */,
 				0B34DEBC244FDDB900870321 /* User.swift in Sources */,
 				0BEF4AF32451199300CC30B8 /* Decoding.swift in Sources */,
@@ -644,7 +660,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = itesm.Community;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -662,7 +678,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = itesm.Community;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -29,12 +29,12 @@ class WelcomeViewController: UIViewController {
 		imageView.image = UIImage(named: "community_logo")
 		imageView.contentMode = .scaleAspectFit
 		
-		loginButton.setTitle("Log in", for: .normal)
+		loginButton.setTitle("Iniciar sesión", for: .normal)
 		loginButton.roundCorners(to: loginButton.frame.height / 2)
 		loginButton.backgroundColor = UIColor.getCommunity(.lightBlue)
 		loginButton.setTitleColor(.white, for: .normal)
 		
-		signupButton.setTitle("Sign up", for: .normal)
+		signupButton.setTitle("Registrarse", for: .normal)
 		signupButton.roundCorners(to: signupButton.frame.height / 2)
 		signupButton.backgroundColor = UIColor.getCommunity(.orange)
 		signupButton.setTitleColor(.white, for: .normal)

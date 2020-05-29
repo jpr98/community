@@ -21,7 +21,6 @@ class CreateUserViewController: UIViewController {
 	@IBOutlet weak var lastnameTextField: UITextField!
 	@IBOutlet weak var addressTextField: UITextField!
 	@IBOutlet weak var phoneTextField: UITextField!
-	@IBOutlet weak var emergencyPhoneTextField: UITextField!
 	@IBOutlet weak var communityTextField: UITextField!
 	@IBOutlet weak var continueButton: UIButton!
 	
@@ -42,24 +41,30 @@ class CreateUserViewController: UIViewController {
 	}
 	
 	func configureUI() {
-		continueButton.setTitle("Continue", for: .normal)
+		continueButton.setTitle("Continuar", for: .normal)
 		continueButton.roundCorners(to: continueButton.frame.height / 2)
 		continueButton.backgroundColor = UIColor.getCommunity(.darkBlue)
 		continueButton.setTitleColor(.white, for: .normal)
 	}
 	
 	@IBAction func continueButtonTapped(_ sender: Any) {
-		let user = User()
-		user.name = nameTextField.text!
-		user.lastname = lastnameTextField.text!
-		user.address = addressTextField.text!
-		user.phone = phoneTextField.text!
+		let userRequest = CreateUserRequest(name: nameTextField.text!,
+											email: "",
+											password: "",
+											colony: Community().id,
+											address: addressTextField.text!,
+											phone: phoneTextField.text!,
+											student: false)
 		
-		viewModel?.create(user: user, completion: { user in
-			let tabBar = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as! UITabBarController
-			UIApplication.shared.windows.first?.rootViewController = tabBar
-			UIApplication.shared.windows.first?.makeKeyAndVisible()
-		})
+		viewModel?.create(request: userRequest) { success in
+			DispatchQueue.main.async {
+				if success {
+					self.showEmergencyVC()
+				} else {
+					self.alert(message: "Hubo un problema creando su usuario. Por favor intente de nuevo más tarde.")
+				}
+			}
+		}
 	}
 	
 }
@@ -67,7 +72,7 @@ class CreateUserViewController: UIViewController {
 extension UIViewController {
 	func showCreateUserVC(user: User) {
 		let vc = CreateUserViewController.make()
-		let vm = CreateUserViewModel()
+		let vm = CreateUserViewModel(for: user)
 		vc.viewModel = vm
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true, completion: nil)

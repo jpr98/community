@@ -19,7 +19,7 @@ struct CreateReportRequest: Encodable {
 		self.description = description
 	}
 	
-	enum CodingKeys : String, CodingKey {
+	enum CodingKeys: String, CodingKey {
         case type = "iType", user = "fkUser", description = "sDescription"
     }
 }
@@ -36,7 +36,38 @@ struct ReportResponse: Decodable {
 	var sendingHelp: Bool
 	var user: String
 	
-	enum CodingKeys : String, CodingKey {
+	enum CodingKeys: String, CodingKey {
         case type = "iType", user = "fkUser", description = "sDescription", imageURL = "sImageKey", sendingHelp = "bSendingHelp"
     }
+}
+
+struct FeedReportsResponse: Decodable {
+	var reports: [FeedReportResponse]
+	
+	enum CodingKeys: String, CodingKey {
+		case reports = "reports"
+	}
+}
+
+struct FeedReportResponse: Decodable {
+	var id: String
+	var type: Int
+	var description: String
+	var imageURL: String
+	var sendingHelp: String
+	
+	var user: UserInsideReport
+	
+	struct UserInsideReport: Decodable {
+		var name: String
+		var address: String
+		
+		enum CodingKeys: String, CodingKey {
+			case name = "sName", address = "sAddress"
+		}
+	}
+	
+	enum CodingKeys: String, CodingKey {
+		case id = "_id", type = "iType", description = "sDescription", imageURL = "sImageKey", sendingHelp = "bSendingHelp", user = "fkUser"
+	}
 }

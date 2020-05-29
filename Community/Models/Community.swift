@@ -9,9 +9,5 @@
 import Foundation
 
 class Community {
-	var id: String
-	
-	init(id: String) {
-		self.id = id
-	}
+	let id = "5ecf0476419a3b53ac992b3e"
 }

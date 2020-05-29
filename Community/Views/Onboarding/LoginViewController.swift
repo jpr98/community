@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
 		}
 		
 		changeUsecaseButton.setTitleColor(.getCommunity(.darkBlue), for: .normal)
-		continueButton.setTitle("Continue", for: .normal)
+		continueButton.setTitle("Continuar", for: .normal)
 		continueButton.roundCorners(to: continueButton.frame.height / 2)
 		continueButton.backgroundColor = UIColor.getCommunity(.lightBlue)
 		changeButtonState(enabled: false)
@@ -74,17 +74,10 @@ class LoginViewController: UIViewController {
 		}
 	}
 	
-	func alert(message: String, _ handler: (()->())? = nil) {
-		let alertVC = UIAlertController(title: "Oops!", message: message, preferredStyle: .alert)
-		let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-		alertVC.addAction(okAction)
-		present(alertVC, animated: true, completion: handler)
-	}
-	
 	// MARK: - IB ACTIONS
 	@IBAction func continueButtonTapped(_ sender: Any) {
 		guard let email = emailTextField.text, let password = passwordTextField.text else {
-			alert(message: "It seems like you are missing information")
+			alert(message: "Parece que falta información.")
 			return
 		}
 		
@@ -96,7 +89,7 @@ class LoginViewController: UIViewController {
 						UIApplication.shared.windows.first?.rootViewController = tabBar
 						UIApplication.shared.windows.first?.makeKeyAndVisible()
 					} else {
-						self.alert(message: "Error authenticating you. Please try again") {
+						self.alert(message: "Error iniciando sesión. Por favor intente de nuevo.") {
 							self.passwordTextField.text = ""
 							self.changeButtonState(enabled: false)
 						}
@@ -104,9 +97,8 @@ class LoginViewController: UIViewController {
 				}
 			}
 		} else {
-			viewModel?.create(for: email, with: password) { [unowned self] user in
-				self.showCreateUserVC(user: user)
-			}
+			let user = User(email: email, password: password)
+			self.showCreateUserVC(user: user)
 		}
 		
 	}

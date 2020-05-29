@@ -10,7 +10,29 @@ import Foundation
 
 class CreateUserViewModel {
 	
-	func create(user: User, completion: @escaping User.createCompletion) {
-		user.create(completion)
+	private var email: String
+	private var password: String
+	
+	init(for user: User) {
+		email = user.email
+		password = user.password ?? ""
+	}
+	
+	func create(request: CreateUserRequest, _ completion: @escaping User.createCompletion) {
+		var req = request
+		req.email = email
+		req.password = password
+		
+		User.create(req) { success in
+			guard success else {
+				completion(false)
+				return
+			}
+			
+			let request = AuthRequest(email: self.email, password: self.password)
+			User.authenticate(request) { success in
+				completion(success)
+			}
+		}
 	}
 }

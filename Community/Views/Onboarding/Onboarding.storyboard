@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -204,16 +204,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVn-qL-Xcf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQN-qL-YJe">
-                                        <rect key="frame" x="135.5" y="160" width="143.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrese sus datos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQN-qL-YJe">
+                                        <rect key="frame" x="124" y="182" width="166" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Rw9-Cj-lRc">
-                                        <rect key="frame" x="62" y="244" width="290" height="330"/>
+                                        <rect key="frame" x="62" y="266" width="290" height="266"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFF-Zv-vs8">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFF-Zv-vs8">
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="hB2-fw-39c"/>
@@ -221,28 +221,23 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="579-23-e8S">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="579-23-e8S">
                                                 <rect key="frame" x="0.0" y="58" width="290" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9T-3C-gH7">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dirección" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9T-3C-gH7">
                                                 <rect key="frame" x="0.0" y="116" width="290" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rup-Xg-r2M">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rup-Xg-r2M">
                                                 <rect key="frame" x="0.0" y="174" width="290" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emergecy Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uoP-Sf-dkX">
-                                                <rect key="frame" x="0.0" y="232" width="290" height="40"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Community" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Vq-jqW">
-                                                <rect key="frame" x="0.0" y="290" width="290" height="40"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comunidad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Vq-jqW">
+                                                <rect key="frame" x="0.0" y="232" width="290" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -250,13 +245,11 @@
                                         <constraints>
                                             <constraint firstItem="Rup-Xg-r2M" firstAttribute="height" secondItem="u9T-3C-gH7" secondAttribute="height" id="G3v-KJ-pD1"/>
                                             <constraint firstItem="u9T-3C-gH7" firstAttribute="height" secondItem="579-23-e8S" secondAttribute="height" id="bYS-pH-IGi"/>
-                                            <constraint firstItem="rf6-Vq-jqW" firstAttribute="height" secondItem="uoP-Sf-dkX" secondAttribute="height" id="lpj-1e-8Tb"/>
                                             <constraint firstItem="579-23-e8S" firstAttribute="height" secondItem="WFF-Zv-vs8" secondAttribute="height" id="vDc-Xd-OJ8"/>
-                                            <constraint firstItem="uoP-Sf-dkX" firstAttribute="height" secondItem="Rup-Xg-r2M" secondAttribute="height" id="wAb-x5-fAg"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0o3-oE-TIh">
-                                        <rect key="frame" x="91" y="609" width="232" height="45"/>
+                                        <rect key="frame" x="91" y="567" width="232" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="kf6-X1-3cI"/>
                                         </constraints>
@@ -274,8 +267,9 @@
                                     <constraint firstItem="Rw9-Cj-lRc" firstAttribute="top" secondItem="UQN-qL-YJe" secondAttribute="bottom" constant="60" id="H3d-xD-0Fa"/>
                                     <constraint firstItem="0o3-oE-TIh" firstAttribute="top" secondItem="Rw9-Cj-lRc" secondAttribute="bottom" constant="35" id="Lb1-6Y-J95"/>
                                     <constraint firstItem="Rw9-Cj-lRc" firstAttribute="centerX" secondItem="fVn-qL-Xcf" secondAttribute="centerX" id="NId-Hy-oO3"/>
-                                    <constraint firstItem="Rw9-Cj-lRc" firstAttribute="centerY" secondItem="fVn-qL-Xcf" secondAttribute="centerY" id="Sgf-KX-QLg"/>
+                                    <constraint firstItem="Rw9-Cj-lRc" firstAttribute="centerY" secondItem="fVn-qL-Xcf" secondAttribute="centerY" constant="-10" id="Sgf-KX-QLg"/>
                                     <constraint firstItem="Rw9-Cj-lRc" firstAttribute="width" secondItem="fVn-qL-Xcf" secondAttribute="width" multiplier="0.7" id="T5G-qb-GbL"/>
+                                    <constraint firstItem="UQN-qL-YJe" firstAttribute="width" relation="lessThanOrEqual" secondItem="fVn-qL-Xcf" secondAttribute="width" multiplier="0.8" id="bPU-5p-xsV"/>
                                     <constraint firstItem="0o3-oE-TIh" firstAttribute="width" secondItem="Rw9-Cj-lRc" secondAttribute="width" multiplier="0.8" id="ybi-l2-UNt"/>
                                 </constraints>
                             </view>
@@ -293,7 +287,6 @@
                         <outlet property="addressTextField" destination="u9T-3C-gH7" id="E0s-5l-mhq"/>
                         <outlet property="communityTextField" destination="rf6-Vq-jqW" id="dqt-Lk-8hR"/>
                         <outlet property="continueButton" destination="0o3-oE-TIh" id="vfT-uQ-cnQ"/>
-                        <outlet property="emergencyPhoneTextField" destination="uoP-Sf-dkX" id="J8j-ub-3pA"/>
                         <outlet property="lastnameTextField" destination="579-23-e8S" id="fMf-YK-0IT"/>
                         <outlet property="nameTextField" destination="WFF-Zv-vs8" id="uxo-Pa-z7g"/>
                         <outlet property="phoneTextField" destination="Rup-Xg-r2M" id="M5Y-VK-dJI"/>
@@ -303,6 +296,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDE-xu-bFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1623" y="139"/>
+        </scene>
+        <!--Emergency Contact View Controller-->
+        <scene sceneID="B9K-io-weX">
+            <objects>
+                <viewController storyboardIdentifier="EmergencyVC" id="ssO-6q-GxR" customClass="EmergencyContactViewController" customModule="Community" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NyR-YF-HYy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="iFY-JN-PAO">
+                                <rect key="frame" x="91.5" y="319.5" width="231" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacto de emergencia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wY-y7-vSb">
+                                        <rect key="frame" x="0.0" y="0.0" width="231" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="instrucciones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPN-F0-NMY">
+                                        <rect key="frame" x="8" y="38" width="215" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JPN-F0-NMY" firstAttribute="leading" secondItem="iFY-JN-PAO" secondAttribute="leading" constant="8" id="HaK-N0-k6D"/>
+                                    <constraint firstAttribute="trailing" secondItem="JPN-F0-NMY" secondAttribute="trailing" constant="8" id="S92-bH-ePT"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo de emergencia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzZ-1M-pjp">
+                                <rect key="frame" x="62" y="418" width="290" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JX0-op-TOR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5m-O3-FKR">
+                                <rect key="frame" x="90.5" y="493" width="233" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="ssO-6q-GxR" eventType="touchUpInside" id="rCk-w5-MXu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hml-2I-sC0">
+                                <rect key="frame" x="90.5" y="537" width="233" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="skipButtonTapped:" destination="ssO-6q-GxR" eventType="touchUpInside" id="wSc-t4-lWU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kzZ-1M-pjp" firstAttribute="top" secondItem="iFY-JN-PAO" secondAttribute="bottom" constant="40" id="BmN-uX-Hxq"/>
+                            <constraint firstItem="L5m-O3-FKR" firstAttribute="width" secondItem="kzZ-1M-pjp" secondAttribute="width" multiplier="0.8" constant="0.80000000000000004" id="Dnv-Su-GL0"/>
+                            <constraint firstItem="Hml-2I-sC0" firstAttribute="width" secondItem="L5m-O3-FKR" secondAttribute="width" id="Gqk-wi-Phs"/>
+                            <constraint firstItem="kzZ-1M-pjp" firstAttribute="centerY" secondItem="K9C-en-Kw4" secondAttribute="centerY" constant="-15" id="IxW-pE-EfU"/>
+                            <constraint firstItem="L5m-O3-FKR" firstAttribute="top" secondItem="kzZ-1M-pjp" secondAttribute="bottom" constant="35" id="OcA-Ed-LSy"/>
+                            <constraint firstItem="Hml-2I-sC0" firstAttribute="height" secondItem="L5m-O3-FKR" secondAttribute="height" id="SsK-xH-eof"/>
+                            <constraint firstItem="L5m-O3-FKR" firstAttribute="centerX" secondItem="kzZ-1M-pjp" secondAttribute="centerX" id="TFt-tu-Tec"/>
+                            <constraint firstItem="Hml-2I-sC0" firstAttribute="top" secondItem="L5m-O3-FKR" secondAttribute="bottom" constant="10" id="avo-cv-EcV"/>
+                            <constraint firstItem="kzZ-1M-pjp" firstAttribute="centerX" secondItem="K9C-en-Kw4" secondAttribute="centerX" id="dKW-qd-Hrw"/>
+                            <constraint firstItem="iFY-JN-PAO" firstAttribute="width" relation="lessThanOrEqual" secondItem="NyR-YF-HYy" secondAttribute="width" multiplier="0.8" id="dXF-3C-Y1U"/>
+                            <constraint firstItem="iFY-JN-PAO" firstAttribute="centerX" secondItem="kzZ-1M-pjp" secondAttribute="centerX" id="mnD-Fn-em5"/>
+                            <constraint firstItem="Hml-2I-sC0" firstAttribute="centerX" secondItem="L5m-O3-FKR" secondAttribute="centerX" id="ps5-gb-5XB"/>
+                            <constraint firstItem="kzZ-1M-pjp" firstAttribute="width" secondItem="NyR-YF-HYy" secondAttribute="width" multiplier="0.7" id="yl4-aQ-XKz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K9C-en-Kw4"/>
+                    </view>
+                    <connections>
+                        <outlet property="contactTextField" destination="kzZ-1M-pjp" id="Xub-xW-l3a"/>
+                        <outlet property="continueButton" destination="L5m-O3-FKR" id="g3S-RG-iq3"/>
+                        <outlet property="skipButton" destination="Hml-2I-sC0" id="0cu-Og-gxE"/>
+                        <outlet property="subtitleLabel" destination="JPN-F0-NMY" id="L2c-vU-vj2"/>
+                        <outlet property="titleLabel" destination="3wY-y7-vSb" id="oeP-n3-F4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VwR-am-u6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2413" y="138"/>
         </scene>
     </scenes>
     <resources>

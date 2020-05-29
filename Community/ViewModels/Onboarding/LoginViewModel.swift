@@ -25,19 +25,19 @@ class LoginViewModel {
 	
 	func setup() {
 		if usecase == .login {
-			title.value = "Log in"
+			title.value = "Iniciar sesión"
 			subtitle.value = """
-			Welcome back to Community!
-			Please enter your credentials
+			Bienvenido de vuelta a Community!
+			Por favor ingrese sus credenciales
 			"""
-			changeButtonTitle.value = "Create account"
+			changeButtonTitle.value = "Crear una cuenta"
 		} else {
-			title.value = "Sign up"
+			title.value = "Registrarse"
 			subtitle.value = """
-			We are thrilled to have you join Community!
-			Please enter your email and new password
+			Estamos muy emocionados de que se una a Community!
+			Por favor ingrese un correo y contraseña
 			"""
-			changeButtonTitle.value = "I have an account"
+			changeButtonTitle.value = "Ya tengo una cuenta"
 		}
 	}
 	
@@ -49,12 +49,6 @@ class LoginViewModel {
 	func authenticate(with email: String, and password: String, _ completion: @escaping User.authCompletion) {
 		let authRequest = AuthRequest(email: email, password: password)
 		User.authenticate(authRequest, completion: completion)
-	}
-	
-	func create(for email: String, with password: String, _ completion: @escaping User.createCompletion) {
-		#warning("fix this")
-		let user = User(email: email, password: password)
-		completion(user)
 	}
 	
 }
