@@ -28,6 +28,13 @@ class MainProfileViewController: UIViewController {
 	func configureUI() {
 		nameLabel.text = User.shared.name
 		
+		profilePictrueImageView.roundCorners(to: profilePictrueImageView.frame.height / 2)
+		if User.shared.imageURL.isEmpty {
+			profilePictrueImageView.image = UIImage(named: "pp")
+		} else {
+			profilePictrueImageView.downloaded(from: User.shared.imageURL)
+		}
+		
 		editProfileButton.setTitleColor(.getCommunity(.darkBlue), for: .normal)
 		editProfileButton.setTitle("Editar perfil", for: .normal)
 		editProfileButton.setTitleColor(.white, for: .normal)
@@ -56,14 +63,16 @@ class MainProfileViewController: UIViewController {
 	
 	// MARK: - IBActions
 	@IBAction func profilePictureButtonTapped(_ sender: Any) {
-		
 	}
+	
 	@IBAction func editProfileButtonTapped(_ sender: Any) {
 		showCreateUserVC(user: User.shared, isOB: false)
 	}
+	
 	@IBAction func emergencyButtonTapped(_ sender: Any) {
 		showEmergencyVC(isOb: false)
 	}
+	
 	@IBAction func creditsButtonTapped(_ sender: Any) {
 		showCredits()
 	}

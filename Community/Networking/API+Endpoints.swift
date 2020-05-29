@@ -22,6 +22,10 @@ extension RestAPI {
 		request(.community, path: "/users/\(id)", method: .PUT, done: done)
 	}
 	
+	class func getUser(with id: String, done: @escaping Response<WrapperUserResponse>) {
+		request(.community, path: "/users/\(id)", method: .GET, done: done)
+	}
+	
 	// MARK: - Reports
 	class func create(body: CreateReportRequest, done: @escaping Response<CreateReportResponse>) {
 		request(.community, path: "/reports", method: .POST, body: body, done: done)

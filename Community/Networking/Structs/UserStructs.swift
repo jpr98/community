@@ -45,3 +45,21 @@ struct UpdateUserResponse: Decodable {
 		case message = "message"
 	}
 }
+
+struct WrapperUserResponse: Decodable {
+	var user: UserResponse
+	
+	enum CodingKeys: String, CodingKey {
+		case user = "user"
+	}
+}
+
+struct UserResponse: Decodable {
+	var name: String
+	var imageURL: String
+	var address: String
+	
+	enum CodingKeys: String, CodingKey {
+		case name = "sName", imageURL = "sImgProfileUrl", address = "sAddress"
+	}
+}

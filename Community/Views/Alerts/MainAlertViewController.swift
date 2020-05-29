@@ -21,7 +21,7 @@ class MainAlertViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		User.shared.populate()
 		configureUI()
 		setGestures(withDuration: 0.2)
 	}

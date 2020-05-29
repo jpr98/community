@@ -18,6 +18,7 @@ class User {
 	var phone: String
 	var password: String?
 	var student: Bool
+	var imageURL = ""
 	
 	typealias authCompletion = ((_ success: Bool)->())
 	typealias createCompletion = ((_ user: Bool)->())
@@ -68,12 +69,28 @@ class User {
 		self.student = student
 	}
 	
+	func populate() {
+		if let id = UserDefaults.standard.string(forKey: "user_id") {
+			RestAPI.getUser(with: id) { response in
+				switch response {
+				case .success(let u):
+					self.name = u.user.name
+					self.address = u.user.address
+					self.imageURL = u.user.imageURL
+				case .failure(let e):
+					print(e.localizedDescription)
+				}
+			}
+		}
+	}
+	
 	static func authenticate(_ auth: AuthRequest, completion: @escaping authCompletion) {
 		RestAPI.auth(body: auth) { response in
 			switch response {
 			case .success(let auth):
 				UserDefaults.standard.set(auth.token, forKey: "token")
 				UserDefaults.standard.set(true, forKey: "user_loggedin")
+				UserDefaults.standard.set(auth.user.id, forKey: "user_id")
 				shared.token = auth.token
 				shared.id = auth.user.id
 				completion(true)

@@ -12,6 +12,7 @@ class FeedViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
 	
+	var refreshControl = UIRefreshControl()
 	var viewModel = FeedViewModel()
 	
 	override func viewDidLoad() {
@@ -21,6 +22,10 @@ class FeedViewController: UIViewController {
 		
 		tableView.delegate = self
 		tableView.dataSource = self
+		
+		refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+		refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+		tableView.addSubview(refreshControl)
 		
 		viewModel.getReports() { success in
 			DispatchQueue.main.async {
@@ -34,6 +39,17 @@ class FeedViewController: UIViewController {
 		
 		viewModel.reports.addObserver { (_, _) in
 			self.tableView.reloadData()
+		}
+	}
+	
+	@objc func refresh(_ sender: AnyObject) {
+		viewModel.getReports() { success in
+			DispatchQueue.main.async {
+				if success {
+					self.tableView.reloadData()
+				}
+				self.refreshControl.endRefreshing()
+			}
 		}
 	}
 	
