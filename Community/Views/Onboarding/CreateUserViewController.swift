@@ -23,6 +23,7 @@ class CreateUserViewController: UIViewController {
 	@IBOutlet weak var phoneTextField: UITextField!
 	@IBOutlet weak var communityTextField: UITextField!
 	@IBOutlet weak var continueButton: UIButton!
+	@IBOutlet weak var returnButton: UIButton!
 	
 	var viewModel: CreateUserViewModel?
 	
@@ -45,6 +46,18 @@ class CreateUserViewController: UIViewController {
 		continueButton.roundCorners(to: continueButton.frame.height / 2)
 		continueButton.backgroundColor = UIColor.getCommunity(.darkBlue)
 		continueButton.setTitleColor(.white, for: .normal)
+		
+		if let viewModel = viewModel {
+			if viewModel.isOB {
+				returnButton.isHidden = true
+			} else {
+				returnButton.setTitle("Regresar", for: .normal)
+				returnButton.setTitleColor(UIColor.getCommunity(.darkBlue), for: .normal)
+				continueButton.setTitle("Guardar", for: .normal)
+				
+				titleLabel.text = "Actualice sus datos"
+			}
+		}
 	}
 	
 	@IBAction func continueButtonTapped(_ sender: Any) {
@@ -67,12 +80,18 @@ class CreateUserViewController: UIViewController {
 		}
 	}
 	
+	@IBAction func returnButtonTapped(_ sender: Any) {
+		dismiss(animated: true, completion: nil)
+	}
+	
+	
 }
 
 extension UIViewController {
-	func showCreateUserVC(user: User) {
+	func showCreateUserVC(user: User, isOB: Bool = true) {
 		let vc = CreateUserViewController.make()
 		let vm = CreateUserViewModel(for: user)
+		vm.isOB = isOB
 		vc.viewModel = vm
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true, completion: nil)

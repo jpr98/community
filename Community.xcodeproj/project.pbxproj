@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3252F124818E4C00541940 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3252EF24818E4C00541940 /* Profile.storyboard */; };
+		0B3252F5248194E500541940 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3252F4248194E500541940 /* ProfileViewModel.swift */; };
+		0B3252F72481972800541940 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3252F62481972800541940 /* CreditsViewController.swift */; };
+		0B3252F924819A6000541940 /* UIImageView+Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3252F824819A6000541940 /* UIImageView+Community.swift */; };
 		0B34DE97244FC92000870321 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DE96244FC92000870321 /* AppDelegate.swift */; };
 		0B34DE99244FC92000870321 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DE98244FC92000870321 /* SceneDelegate.swift */; };
 		0B34DE9B244FC92000870321 /* MainAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34DE9A244FC92000870321 /* MainAlertViewController.swift */; };
@@ -31,7 +35,7 @@
 		0B98A4F6244FFEE10086D4F4 /* UIView+Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4F5244FFEE10086D4F4 /* UIView+Community.swift */; };
 		0B98A4F9245001EA0086D4F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4F8245001EA0086D4F4 /* LoginViewModel.swift */; };
 		0B98A4FB24500FAB0086D4F4 /* Community+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4FA24500FAB0086D4F4 /* Community+UIColor.swift */; };
-		0B98A4FF245025250086D4F4 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4FE245025250086D4F4 /* ThirdViewController.swift */; };
+		0B98A4FF245025250086D4F4 /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A4FE245025250086D4F4 /* MainProfileViewController.swift */; };
 		0B98A5022450A27D0086D4F4 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A5012450A27D0086D4F4 /* Observable.swift */; };
 		0B98A5062450BC200086D4F4 /* UILabel+Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98A5052450BC200086D4F4 /* UILabel+Observer.swift */; };
 		0BBA4EE9247F2F5400E34355 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA4EE7247F2F5400E34355 /* Feed.storyboard */; };
@@ -64,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B3252F024818E4C00541940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Community/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		0B3252F4248194E500541940 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		0B3252F62481972800541940 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		0B3252F824819A6000541940 /* UIImageView+Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Community.swift"; sourceTree = "<group>"; };
 		0B34DE93244FC92000870321 /* Community.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Community.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B34DE96244FC92000870321 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B34DE98244FC92000870321 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +100,7 @@
 		0B98A4F5244FFEE10086D4F4 /* UIView+Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Community.swift"; sourceTree = "<group>"; };
 		0B98A4F8245001EA0086D4F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0B98A4FA24500FAB0086D4F4 /* Community+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Community+UIColor.swift"; sourceTree = "<group>"; };
-		0B98A4FE245025250086D4F4 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		0B98A4FE245025250086D4F4 /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = "<group>"; };
 		0B98A5012450A27D0086D4F4 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		0B98A5052450BC200086D4F4 /* UILabel+Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Observer.swift"; sourceTree = "<group>"; };
 		0BBA4EE8247F2F5400E34355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Community/Base.lproj/Feed.storyboard; sourceTree = "<group>"; };
@@ -132,6 +140,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B3252F224818E5600541940 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0B98A4FE245025250086D4F4 /* MainProfileViewController.swift */,
+				0B3252EF24818E4C00541940 /* Profile.storyboard */,
+				0B3252F62481972800541940 /* CreditsViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0B3252F3248194DD00541940 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0B3252F4248194E500541940 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		0B34DE8A244FC92000870321 = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +190,6 @@
 				0B34DEA1244FC92200870321 /* Assets.xcassets */,
 				0B34DEA3244FC92200870321 /* LaunchScreen.storyboard */,
 				0B34DEA6244FC92200870321 /* Info.plist */,
-				0B98A4FE245025250086D4F4 /* ThirdViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -222,6 +247,7 @@
 		0B34DECF244FF18A00870321 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0B3252F224818E5600541940 /* Profile */,
 				0BBA4EE6247F2DF500E34355 /* Feed */,
 				0B94DC8B2468829100EE250A /* Alerts */,
 				0B34DED5244FF73900870321 /* Onboarding */,
@@ -232,6 +258,7 @@
 		0B34DED0244FF19A00870321 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0B3252F3248194DD00541940 /* Profile */,
 				0BBA4EEF2480496C00E34355 /* Feed */,
 				0B94DC972468FE0900EE250A /* Alerts */,
 				0B98A4F7245001D90086D4F4 /* Onboarding */,
@@ -286,6 +313,7 @@
 				0B98A4F5244FFEE10086D4F4 /* UIView+Community.swift */,
 				0B98A4FA24500FAB0086D4F4 /* Community+UIColor.swift */,
 				0B94DC9A24692D3E00EE250A /* UIViewController+Community.swift */,
+				0B3252F824819A6000541940 /* UIImageView+Community.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -421,6 +449,7 @@
 			files = (
 				0B34DEA5244FC92200870321 /* LaunchScreen.storyboard in Resources */,
 				0B34DEA2244FC92200870321 /* Assets.xcassets in Resources */,
+				0B3252F124818E4C00541940 /* Profile.storyboard in Resources */,
 				0BBA4EE9247F2F5400E34355 /* Feed.storyboard in Resources */,
 				0B34DEA0244FC92000870321 /* Main.storyboard in Resources */,
 				0B94DC8E2468861B00EE250A /* Alerts.storyboard in Resources */,
@@ -458,9 +487,10 @@
 				0BBA4EF72480A26B00E34355 /* EmergencyContactViewController.swift in Sources */,
 				0BEF4AF7245145B300CC30B8 /* AuthStructs.swift in Sources */,
 				0BEF4AF52451206B00CC30B8 /* API+Endpoints.swift in Sources */,
+				0B3252F924819A6000541940 /* UIImageView+Community.swift in Sources */,
 				0B34DED4244FF1F400870321 /* WelcomeViewController.swift in Sources */,
 				0BBA4EF32480707300E34355 /* FeedViewModel.swift in Sources */,
-				0B98A4FF245025250086D4F4 /* ThirdViewController.swift in Sources */,
+				0B98A4FF245025250086D4F4 /* MainProfileViewController.swift in Sources */,
 				0B34DE9D244FC92000870321 /* FeedViewController.swift in Sources */,
 				0BBA4EFD248171D400E34355 /* FeedDetailViewController.swift in Sources */,
 				0B98A4FB24500FAB0086D4F4 /* Community+UIColor.swift in Sources */,
@@ -469,6 +499,7 @@
 				0BBA4EEE2480468000E34355 /* FeedTableViewCell.swift in Sources */,
 				0B98A5062450BC200086D4F4 /* UILabel+Observer.swift in Sources */,
 				0BEF4AF12451163E00CC30B8 /* AnyEncodable.swift in Sources */,
+				0B3252F5248194E500541940 /* ProfileViewModel.swift in Sources */,
 				0B34DE9B244FC92000870321 /* MainAlertViewController.swift in Sources */,
 				0B94DC9024688FD700EE250A /* CircularTransition.swift in Sources */,
 				0BEF4AED2451105200CC30B8 /* NetworkTypes.swift in Sources */,
@@ -477,6 +508,7 @@
 				0B34DE97244FC92000870321 /* AppDelegate.swift in Sources */,
 				0B34DEBC244FDDB900870321 /* User.swift in Sources */,
 				0BEF4AF32451199300CC30B8 /* Decoding.swift in Sources */,
+				0B3252F72481972800541940 /* CreditsViewController.swift in Sources */,
 				0B34DE99244FC92000870321 /* SceneDelegate.swift in Sources */,
 				0BBA4EFF24817A6C00E34355 /* FeedDetailViewModel.swift in Sources */,
 			);
@@ -501,6 +533,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0B3252EF24818E4C00541940 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B3252F024818E4C00541940 /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
 		0B34DE9E244FC92000870321 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

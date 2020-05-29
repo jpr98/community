@@ -43,6 +43,8 @@ class FeedDetailViewController: UIViewController {
 		addressLabel.text = viewModel.address
 		descriptionLabel.text = viewModel.description
 		
+		imageView.downloaded(from: viewModel.imageURL)
+		
 		helpButton.setTitle("Enviar ayuda", for: .normal)
 		helpButton.backgroundColor = UIColor.getCommunity(.darkBlue)
 		helpButton.roundCorners(to: helpButton.frame.height / 2)

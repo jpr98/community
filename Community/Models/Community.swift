@@ -9,5 +9,5 @@
 import Foundation
 
 class Community {
-	let id = "5ecf0476419a3b53ac992b3e"
+	let id = "5ed01ab5c424ae92a833646c"
 }

@@ -70,6 +70,6 @@ struct FeedReportResponse: Decodable {
 	}
 	
 	enum CodingKeys: String, CodingKey {
-		case id = "_id", type = "iType", description = "sDescription", imageURL = "sImageKey", sendingHelp = "bSendingHelp", active = "bActive", user = "fkUser"
+		case id = "_id", type = "iType", description = "sDescription", imageURL = "sImageUrl", sendingHelp = "bSendingHelp", active = "bActive", user = "fkUser"
 	}
 }

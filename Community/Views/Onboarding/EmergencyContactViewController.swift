@@ -54,7 +54,7 @@ class EmergencyContactViewController: UIViewController {
 		continueButton.backgroundColor = UIColor.getCommunity(.lightBlue)
 		
 		skipButton.setTitleColor(UIColor.getCommunity(.darkBlue), for: .normal)
-		skipButton.setTitle("Saltar", for: .normal)
+		skipButton.setTitle(viewModel.secondButtonTitle, for: .normal)
 	}
     
 	// MARK: - IBActions
@@ -67,7 +67,7 @@ class EmergencyContactViewController: UIViewController {
 		viewModel?.addEmergencyContact(email: email) { success in
 			DispatchQueue.main.async {
 				if success {
-					self.moveToTabBar()
+					self.advance()
 				} else {
 					self.alert(message: "Hubo un error dando de alta su contacto de emergencia. Por favor trate más tarde.")
 				}
@@ -76,7 +76,16 @@ class EmergencyContactViewController: UIViewController {
 	}
 	
 	@IBAction func skipButtonTapped(_ sender: Any) {
-		moveToTabBar()
+		advance()
+	}
+	
+	func advance() {
+		guard let viewModel = viewModel else { return }
+		if viewModel.isOB {
+			moveToTabBar()
+		} else {
+			dismiss(animated: true, completion: nil)
+		}
 	}
 	
 	private func moveToTabBar() {
@@ -87,9 +96,9 @@ class EmergencyContactViewController: UIViewController {
 }
 
 extension UIViewController {
-	func showEmergencyVC() {
+	func showEmergencyVC(isOb: Bool = true) {
 		let vc = EmergencyContactViewController.make()
-		let vm = EmergencyContactViewModel(user: User.shared)
+		let vm = EmergencyContactViewModel(user: User.shared, isOB: isOb)
 		vc.viewModel = vm
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true, completion: nil)

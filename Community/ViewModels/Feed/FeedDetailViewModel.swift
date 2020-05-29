@@ -14,7 +14,7 @@ class FeedDetailViewModel {
 	var name = ""
 	var address = ""
 	var description = ""
-	private var imageURL = ""
+	var imageURL = ""
 	
 	private var report: Report
 	

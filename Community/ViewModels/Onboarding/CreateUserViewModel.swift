@@ -12,6 +12,7 @@ class CreateUserViewModel {
 	
 	private var email: String
 	private var password: String
+	var isOB: Bool = true
 	
 	init(for user: User) {
 		email = user.email
@@ -34,5 +35,9 @@ class CreateUserViewModel {
 				completion(success)
 			}
 		}
+	}
+	
+	func update() {
+		// update user
 	}
 }

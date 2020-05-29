@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,7 @@
                     <connections>
                         <segue destination="5uh-xy-7fs" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="hzC-uR-nwX" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="x5E-Zf-zFu" kind="relationship" relationship="viewControllers" id="BX6-G8-GbJ"/>
+                        <segue destination="OR2-Pv-sFE" kind="relationship" relationship="viewControllers" id="BX6-G8-GbJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -35,6 +36,32 @@
             </objects>
             <point key="canvasLocation" x="748" y="-329"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="9Dn-qE-d8G">
+            <objects>
+                <viewController id="OR2-Pv-sFE" customClass="ThirdViewController" customModule="Community" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fw0-ow-LCH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9H-QK-JGU">
+                                <rect key="frame" x="166" y="385" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="OR2-Pv-sFE" eventType="touchUpInside" id="jH5-X0-bdS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rtl-Ok-CO1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="smiley" catalog="system" id="sl7-1v-09E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjA-iJ-3xW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1675" y="0.0"/>
+        </scene>
         <!--Feed-->
         <scene sceneID="AVC-uq-d1l">
             <objects>
@@ -45,15 +72,8 @@
             </objects>
             <point key="canvasLocation" x="749" y="358"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="uS8-h0-dbs">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="x5E-Zf-zFu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Rc-pI-TYY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QS3-oh-ZBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1675" y="0.0"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="smiley" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
