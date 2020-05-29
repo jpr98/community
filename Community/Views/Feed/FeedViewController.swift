@@ -12,11 +12,29 @@ class FeedViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
 	
+	var viewModel = FeedViewModel()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		registerCells()
+		
 		tableView.delegate = self
 		tableView.dataSource = self
+		
+		viewModel.getReports() { success in
+			DispatchQueue.main.async {
+				if success {
+					self.tableView.reloadData()
+				} else {
+					
+				}
+			}
+		}
+		
+		viewModel.reports.addObserver { (_, _) in
+			self.tableView.reloadData()
+		}
 	}
 	
 	func registerCells() {
@@ -29,7 +47,7 @@ class FeedViewController: UIViewController {
 extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return viewModel.reports.value?.count ?? 0
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,9 +55,11 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
 			return UITableViewCell()
 		}
 		
-//		cell.setup(indexPath: indexPath,
-//				   vm: <#T##FeedTableViewCellViewModel#>,
-//				   delegate: self)
+		guard let reports = viewModel.reports.value else { return UITableViewCell() }
+		
+		cell.setup(indexPath: indexPath,
+				   r: reports[indexPath.row],
+				   delegate: self)
 		
 		return cell
 	}

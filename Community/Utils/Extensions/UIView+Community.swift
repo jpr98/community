@@ -11,15 +11,14 @@ import UIKit
 extension UIView {
 	
 	func roundCorners(to radius: CGFloat) {
-		self.layer.cornerRadius = radius
-		self.layer.masksToBounds = true
+		layer.cornerRadius = radius
+		layer.masksToBounds = true
 	}
 	
 	func dropShadow() {
-		self.layer.shadowColor = UIColor.black.cgColor
-		self.layer.shadowOpacity = 1
-		self.layer.shadowOffset = .zero
-		self.layer.shadowRadius = 10
-		self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+		layer.shadowColor = UIColor.black.cgColor
+		layer.shadowOffset = CGSize(width: 0, height: 10)
+		layer.shadowRadius = 5
+		layer.shadowOpacity = 0.3
 	}
 }

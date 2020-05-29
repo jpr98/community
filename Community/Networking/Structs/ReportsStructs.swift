@@ -54,7 +54,8 @@ struct FeedReportResponse: Decodable {
 	var type: Int
 	var description: String
 	var imageURL: String
-	var sendingHelp: String
+	var sendingHelp: Bool
+	var active: Bool
 	
 	var user: UserInsideReport
 	
@@ -68,6 +69,6 @@ struct FeedReportResponse: Decodable {
 	}
 	
 	enum CodingKeys: String, CodingKey {
-		case id = "_id", type = "iType", description = "sDescription", imageURL = "sImageKey", sendingHelp = "bSendingHelp", user = "fkUser"
+		case id = "_id", type = "iType", description = "sDescription", imageURL = "sImageKey", sendingHelp = "bSendingHelp", active = "bActive", user = "fkUser"
 	}
 }

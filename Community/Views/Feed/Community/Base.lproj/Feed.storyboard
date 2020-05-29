@@ -15,15 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MW0-Ol-nP0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="92" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MW0-Ol-nP0">
+                                <rect key="frame" x="0.0" y="49" width="414" height="847"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="MW0-Ol-nP0" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="5Az-ft-kxF"/>
-                            <constraint firstItem="MW0-Ol-nP0" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="DCp-yM-p5Y"/>
+                            <constraint firstItem="MW0-Ol-nP0" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="5" id="DCp-yM-p5Y"/>
                             <constraint firstItem="MW0-Ol-nP0" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="J7R-3o-G9Q"/>
                             <constraint firstAttribute="bottom" secondItem="MW0-Ol-nP0" secondAttribute="bottom" id="OAF-iv-Iow"/>
                         </constraints>
@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747.82608695652175" y="357.58928571428572"/>
+            <point key="canvasLocation" x="838" y="294"/>
         </scene>
     </scenes>
     <resources>

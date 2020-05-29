@@ -20,7 +20,27 @@ class FeedViewModel {
 		self.reports = Observable<[Report]>(reports)
 	}
 	
-	func getReports() {
-		// make request
+	func getReports(_ completion: @escaping (Bool)->()) {
+		RestAPI.getFeed { response in
+			switch response {
+			case .success(let feed):
+				self.populateFeed(with: feed)
+				completion(true)
+			case .failure(let e):
+				print(e.localizedDescription)
+				completion(false)
+			}
+		}
+	}
+	
+	private func populateFeed(with responseReports: FeedReportsResponse) {
+		var rs = [Report]()
+		for report in responseReports.reports {
+			let r = Report(with: report)
+			rs.append(r)
+		}
+		
+		reports.value?.removeAll()
+		reports.value = rs
 	}
 }

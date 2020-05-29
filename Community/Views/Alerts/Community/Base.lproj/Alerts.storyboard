@@ -106,14 +106,17 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QCc-h4-oF7">
-                                <rect key="frame" x="32.5" y="156" width="310" height="31"/>
+                                <rect key="frame" x="32.5" y="176" width="310" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Fph-aH-Rhp"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhC-Ex-Q0r">
-                                <rect key="frame" x="97.5" y="222" width="180" height="45"/>
+                                <rect key="frame" x="97.5" y="311" width="180" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="BPV-Fi-uPI"/>
@@ -128,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak5-RG-DTm">
-                                <rect key="frame" x="97.5" y="337" width="180" height="45"/>
+                                <rect key="frame" x="97.5" y="426" width="180" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="3vm-d9-j7T"/>
@@ -142,8 +145,8 @@
                                     <action selector="sendButtonTapped:" destination="3pl-FE-KWh" eventType="touchUpInside" id="Yor-qT-wUT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa un mensaje que describa el evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-yn-2kQ">
-                                <rect key="frame" x="32.5" y="125" width="310" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa un mensaje que describa el evento" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-yn-2kQ">
+                                <rect key="frame" x="32.5" y="125" width="310" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -159,7 +162,7 @@
                             <constraint firstItem="Kcg-yn-2kQ" firstAttribute="width" secondItem="QCc-h4-oF7" secondAttribute="width" id="hLn-3U-Xnd"/>
                             <constraint firstItem="zhC-Ex-Q0r" firstAttribute="top" secondItem="QCc-h4-oF7" secondAttribute="bottom" constant="35" id="mbA-1k-JUQ"/>
                             <constraint firstItem="Ak5-RG-DTm" firstAttribute="top" secondItem="zhC-Ex-Q0r" secondAttribute="bottom" constant="70" id="paz-Qs-Bof"/>
-                            <constraint firstItem="QsJ-QO-hVD" firstAttribute="bottom" secondItem="Ak5-RG-DTm" secondAttribute="bottom" constant="285" id="ppy-9Z-hBf"/>
+                            <constraint firstItem="QsJ-QO-hVD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ak5-RG-DTm" secondAttribute="bottom" constant="100" id="ppy-9Z-hBf"/>
                             <constraint firstItem="QCc-h4-oF7" firstAttribute="centerX" secondItem="QsJ-QO-hVD" secondAttribute="centerX" id="qev-LE-rU7"/>
                             <constraint firstItem="QCc-h4-oF7" firstAttribute="width" secondItem="Sal-5e-OGy" secondAttribute="width" multiplier="0.826087" id="uIl-lL-xIA"/>
                             <constraint firstItem="3Gb-W8-5qW" firstAttribute="leading" secondItem="QsJ-QO-hVD" secondAttribute="leading" constant="40" id="vMv-zC-g3q"/>

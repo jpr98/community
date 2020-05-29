@@ -41,8 +41,22 @@ class Report {
 	var type: AlertType?
 	var imageURL: String?
 	var active: Bool?
-	var user: String?
+	var user: User?
 	var description: String?
+	var sendingHelp: Bool?
+	
+	init() {
+	}
+	
+	init(with report: FeedReportResponse) {
+		id = report.id
+		type = AlertType.init(rawValue: report.type)
+		imageURL = report.imageURL
+		active = report.active
+		user = User(name: report.user.name, address: report.user.address)
+		description = report.description
+		sendingHelp = report.sendingHelp
+	}
 	
 	typealias createReportCompletion = ((_ success: Bool)->())?
 	

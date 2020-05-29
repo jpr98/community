@@ -46,6 +46,17 @@ class User {
 		student = false
 	}
 	
+	init(name: String, address: String) {
+		id = ""
+		self.name = name
+		email = ""
+		community = Community()
+		self.address = address
+		phone = ""
+		token = UserDefaults.standard.string(forKey: "token")
+		student = false
+	}
+	
 	init(id: String, name: String, email: String, token: String, community: Community, address: String, phone: String, student: Bool) {
 		self.id = id
 		self.name = name

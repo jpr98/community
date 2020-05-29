@@ -37,7 +37,6 @@
 		0BBA4EE9247F2F5400E34355 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA4EE7247F2F5400E34355 /* Feed.storyboard */; };
 		0BBA4EEC247F312D00E34355 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA4EEB247F312D00E34355 /* FeedTableViewCell.xib */; };
 		0BBA4EEE2480468000E34355 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EED2480467F00E34355 /* FeedTableViewCell.swift */; };
-		0BBA4EF12480497F00E34355 /* FeedTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */; };
 		0BBA4EF32480707300E34355 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF22480707300E34355 /* FeedViewModel.swift */; };
 		0BBA4EF52480767800E34355 /* UserStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF42480767800E34355 /* UserStructs.swift */; };
 		0BBA4EF72480A26B00E34355 /* EmergencyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA4EF62480A26B00E34355 /* EmergencyContactViewController.swift */; };
@@ -97,7 +96,6 @@
 		0BBA4EE8247F2F5400E34355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Community/Base.lproj/Feed.storyboard; sourceTree = "<group>"; };
 		0BBA4EEB247F312D00E34355 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		0BBA4EED2480467F00E34355 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
-		0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		0BBA4EF22480707300E34355 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		0BBA4EF42480767800E34355 /* UserStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructs.swift; sourceTree = "<group>"; };
 		0BBA4EF62480A26B00E34355 /* EmergencyContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewController.swift; sourceTree = "<group>"; };
@@ -329,7 +327,6 @@
 		0BBA4EEF2480496C00E34355 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				0BBA4EF02480497F00E34355 /* FeedTableViewCellViewModel.swift */,
 				0BBA4EF22480707300E34355 /* FeedViewModel.swift */,
 			);
 			path = Feed;
@@ -457,7 +454,6 @@
 				0BEF4AF52451206B00CC30B8 /* API+Endpoints.swift in Sources */,
 				0B34DED4244FF1F400870321 /* WelcomeViewController.swift in Sources */,
 				0BBA4EF32480707300E34355 /* FeedViewModel.swift in Sources */,
-				0BBA4EF12480497F00E34355 /* FeedTableViewCellViewModel.swift in Sources */,
 				0B98A4FF245025250086D4F4 /* ThirdViewController.swift in Sources */,
 				0B34DE9D244FC92000870321 /* FeedViewController.swift in Sources */,
 				0B98A4FB24500FAB0086D4F4 /* Community+UIColor.swift in Sources */,
