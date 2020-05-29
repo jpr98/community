@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Report-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="MainAlertViewController" customModule="Community" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qzB-3r-LeS">
+                                <rect key="frame" x="114" y="119" width="186" height="639"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqk-QL-1DC">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="186.5"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Vqk-QL-1DC" secondAttribute="height" id="Zfj-WV-Odi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="WXV-e8-pQe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-t8-fR6">
+                                        <rect key="frame" x="0.0" y="226.5" width="186" height="186"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cWp-t8-fR6" secondAttribute="height" id="Bri-lo-sqr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="I3o-fc-JdP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBo-cV-hok">
+                                        <rect key="frame" x="0.0" y="452.5" width="186" height="186.5"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eBo-cV-hok" secondAttribute="height" id="5Y1-lc-rTq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="18"/>
+                                        <state key="normal" title="titulo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="thirdButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nXJ-nA-i4E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qzB-3r-LeS" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.45" id="JO8-xl-945"/>
+                            <constraint firstItem="qzB-3r-LeS" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="75" id="PCJ-qN-hzB"/>
+                            <constraint firstItem="qzB-3r-LeS" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="oUm-1U-u0W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Report" image="exclamationmark.bubble.fill" catalog="system" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="firstButton" destination="Vqk-QL-1DC" id="far-HD-C0F"/>
+                        <outlet property="secondButton" destination="cWp-t8-fR6" id="eGv-Gl-xTT"/>
+                        <outlet property="thirdButton" destination="eBo-cV-hok" id="uXK-Lh-OA5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="-329.46428571428572"/>
+        </scene>
+        <!--Alert Detail View Controller-->
+        <scene sceneID="1zq-V4-vot">
+            <objects>
+                <viewController storyboardIdentifier="AlertDetail" id="3pl-FE-KWh" customClass="AlertDetailViewController" customModule="Community" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sal-5e-OGy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gb-W8-5qW">
+                                <rect key="frame" x="40" y="79" width="40" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="c3j-aN-CkT"/>
+                                    <constraint firstAttribute="width" secondItem="3Gb-W8-5qW" secondAttribute="height" id="vc3-4R-bR1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="✕"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="3pl-FE-KWh" eventType="touchUpInside" id="7eq-ys-z8E"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QCc-h4-oF7">
+                                <rect key="frame" x="36" y="200" width="342" height="182"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhC-Ex-Q0r">
+                                <rect key="frame" x="117" y="417" width="180" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="BPV-Fi-uPI"/>
+                                    <constraint firstAttribute="width" constant="180" id="NeW-1A-cjM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
+                                <state key="normal" title="Añadir imagen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImageButtonTapped:" destination="3pl-FE-KWh" eventType="touchUpInside" id="afH-b9-Lmb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak5-RG-DTm">
+                                <rect key="frame" x="117" y="532" width="180" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="3vm-d9-j7T"/>
+                                    <constraint firstAttribute="height" constant="45" id="caN-9t-hDn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="18"/>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonTapped:" destination="3pl-FE-KWh" eventType="touchUpInside" id="Yor-qT-wUT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa un mensaje que describa el evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-yn-2kQ">
+                                <rect key="frame" x="36" y="169" width="342" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kcg-yn-2kQ" firstAttribute="top" secondItem="3Gb-W8-5qW" secondAttribute="bottom" constant="50" id="4P0-x8-0mh"/>
+                            <constraint firstItem="zhC-Ex-Q0r" firstAttribute="centerX" secondItem="QCc-h4-oF7" secondAttribute="centerX" id="DHj-cV-zIg"/>
+                            <constraint firstItem="Kcg-yn-2kQ" firstAttribute="centerX" secondItem="QCc-h4-oF7" secondAttribute="centerX" id="OnP-c0-Uyo"/>
+                            <constraint firstItem="QCc-h4-oF7" firstAttribute="top" secondItem="Kcg-yn-2kQ" secondAttribute="bottom" constant="10" id="QWR-Tk-kYy"/>
+                            <constraint firstItem="3Gb-W8-5qW" firstAttribute="top" secondItem="QsJ-QO-hVD" secondAttribute="top" constant="35" id="Tcx-vS-IM9"/>
+                            <constraint firstItem="Kcg-yn-2kQ" firstAttribute="width" secondItem="QCc-h4-oF7" secondAttribute="width" id="hLn-3U-Xnd"/>
+                            <constraint firstItem="zhC-Ex-Q0r" firstAttribute="top" secondItem="QCc-h4-oF7" secondAttribute="bottom" constant="35" id="mbA-1k-JUQ"/>
+                            <constraint firstItem="Ak5-RG-DTm" firstAttribute="top" secondItem="zhC-Ex-Q0r" secondAttribute="bottom" constant="70" id="paz-Qs-Bof"/>
+                            <constraint firstItem="QsJ-QO-hVD" firstAttribute="bottom" secondItem="Ak5-RG-DTm" secondAttribute="bottom" constant="285" id="ppy-9Z-hBf"/>
+                            <constraint firstItem="QCc-h4-oF7" firstAttribute="centerX" secondItem="QsJ-QO-hVD" secondAttribute="centerX" id="qev-LE-rU7"/>
+                            <constraint firstItem="QCc-h4-oF7" firstAttribute="width" secondItem="Sal-5e-OGy" secondAttribute="width" multiplier="0.826087" id="uIl-lL-xIA"/>
+                            <constraint firstItem="3Gb-W8-5qW" firstAttribute="leading" secondItem="QsJ-QO-hVD" secondAttribute="leading" constant="40" id="vMv-zC-g3q"/>
+                            <constraint firstItem="Ak5-RG-DTm" firstAttribute="centerX" secondItem="zhC-Ex-Q0r" secondAttribute="centerX" id="wIM-qk-Rxb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QsJ-QO-hVD"/>
+                    </view>
+                    <connections>
+                        <outlet property="addImageButton" destination="zhC-Ex-Q0r" id="61k-xb-yta"/>
+                        <outlet property="closeButton" destination="3Gb-W8-5qW" id="gne-GW-rZa"/>
+                        <outlet property="descriptionLabel" destination="Kcg-yn-2kQ" id="Mlv-nB-pMT"/>
+                        <outlet property="descriptionTextView" destination="QCc-h4-oF7" id="87K-sd-fMi"/>
+                        <outlet property="sendButton" destination="Ak5-RG-DTm" id="tEC-Pr-N9W"/>
+                        <segue destination="isw-sh-lol" kind="unwind" identifier="unwindToMainAlert" unwindAction="unwindToMainAlertVC:" id="3Qa-81-iUB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0a-8V-ttr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="isw-sh-lol" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1647.826086956522" y="-329.46428571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exclamationmark.bubble.fill" catalog="system" width="128" height="110"/>
+    </resources>
+</document>
